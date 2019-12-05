@@ -13,16 +13,12 @@
         android:layout_height="80dp"
         android:layout_alignParentTop="true"
         app:menu="@menu/top_navigation"
-        android:background="@drawable/bottom_navigation_background"
-        android:elevation="800dp"
-        >
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
+        android:background="@drawable/main_navigation_background"
+        android:elevation="800dp" />
 
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        />
+        android:layout_height="match_parent" />
 
 </RelativeLayout>
