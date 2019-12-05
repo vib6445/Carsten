@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_can"
+        android:icon="@drawable/ic_ourselection"
+        android:title="@string/accountFragment" />
+
+    <item
+        android:id="@+id/nav_limo"
+        android:icon="@drawable/ic_lemonade"
+        android:title="@string/homeFragment" />
+
+    <item
+        android:id="@+id/nav_shortBottleBeer"
+        android:icon="@drawable/ic_beershort"
+        android:title="@string/createFragment" />
+
+    <item
+        android:id="@+id/nav_longBottleBeer"
+        android:icon="@drawable/ic_beerlong"
+        android:title="@string/accountFragment" />
+
+</menu>
