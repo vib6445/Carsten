@@ -8,14 +8,16 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="100dp">
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="50dp">
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:paddingLeft="20dp"
             app:srcCompat="@drawable/ic_carsten_logo" />
 
         <TextView
@@ -46,11 +48,14 @@
                 android:layout_rowWeight="1"
                 android:layout_marginBottom="25dp"
                 android:layout_marginTop="25dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:text="New Order"
+                android:textAllCaps="false"
+                android:textSize="17sp"
+                android:gravity="top"
                 android:textStyle="bold"
-                android:background="#000"
+                android:background="@drawable/rounded_button"
                 android:textColor="@color/colorWhite"/>
 
             <Button
@@ -61,11 +66,14 @@
                 android:layout_rowWeight="1"
                 android:layout_marginBottom="25dp"
                 android:layout_marginTop="25dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="16dp"
-                android:text="Delivery status"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:text="Delivery\nstatus"
+                android:textAllCaps="false"
+                android:textSize="17sp"
+                android:gravity="top"
                 android:textStyle="bold"
-                android:background="#000"
+                android:background="@drawable/rounded_button"
                 android:textColor="@color/colorWhite"/>
 
             <Button
@@ -76,11 +84,14 @@
                 android:layout_rowWeight="1"
                 android:layout_marginBottom="25dp"
                 android:layout_marginTop="25dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:text="Profile"
+                android:textAllCaps="false"
+                android:textSize="17sp"
+                android:gravity="top"
                 android:textStyle="bold"
-                android:background="#000"
+                android:background="@drawable/rounded_button"
                 android:textColor="@color/colorWhite"/>
 
             <Button
@@ -91,12 +102,16 @@
                 android:layout_rowWeight="1"
                 android:layout_marginBottom="25dp"
                 android:layout_marginTop="25dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginRight="16dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
                 android:text="TBD"
+                android:textAllCaps="false"
+                android:textSize="17sp"
+                android:gravity="top"
                 android:textStyle="bold"
-                android:background="#000"
-                android:textColor="@color/colorWhite"/>
+                android:background="@drawable/rounded_button"
+                android:textColor="@color/colorWhite"
+                android:drawableBottom="@drawable/ic_profilelogo_white"/>
 
         </GridLayout>
 
