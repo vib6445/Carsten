@@ -3,22 +3,22 @@
 
     <item
         android:id="@+id/nav_can"
-        android:icon="@drawable/ic_ourselection"
+        android:icon="@drawable/icon_ourselection"
         android:title="@string/accountFragment" />
 
     <item
-        android:id="@+id/nav_limo"
-        android:icon="@drawable/ic_lemonade"
+        android:id="@+id/nav_lemonade"
+        android:icon="@drawable/icon_lemonade"
         android:title="@string/homeFragment" />
 
     <item
         android:id="@+id/nav_shortBottleBeer"
-        android:icon="@drawable/ic_beershort"
+        android:icon="@drawable/icon_shortbeer"
         android:title="@string/createFragment" />
 
     <item
         android:id="@+id/nav_longBottleBeer"
-        android:icon="@drawable/ic_beerlong"
+        android:icon="@drawable/icon_longbeer"
         android:title="@string/accountFragment" />
 
 </menu>

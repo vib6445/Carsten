@@ -8,6 +8,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+
+import de.thi.uxd.android.carsten.CreateSlabs.LemonadeFragment;
+import de.thi.uxd.android.carsten.CreateSlabs.LongBeerFragment;
+import de.thi.uxd.android.carsten.CreateSlabs.OurSelectionFragment;
+import de.thi.uxd.android.carsten.CreateSlabs.ShortBeerFragment;
 
 public class CreateFragment extends Fragment {
     @Nullable
@@ -21,7 +30,37 @@ public class CreateFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ViewPager viewPagerObject = (ViewPager) getActivity().findViewById(R.id.viewPager);
+        PagerAdapter pagerAdapter = new FixedTabsPagerAdapter(getFragmentManager());
+        viewPagerObject.setAdapter(pagerAdapter);
         //fixIconSize();
+    }
+
+    private class FixedTabsPagerAdapter extends FragmentPagerAdapter {
+        public FixedTabsPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public int getCount() {
+            return 4;
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position) {
+                case 0:
+                    return new OurSelectionFragment();
+                case 1:
+                    return new LemonadeFragment();
+                case 2:
+                    return new ShortBeerFragment();
+                case 3:
+                    return new LongBeerFragment();
+                default:
+                    return null;
+            }
+        }
     }
 
     /* to override the standard icon size of the bottom navigation view of the Slab-Selection
