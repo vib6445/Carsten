@@ -4,9 +4,12 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CompoundButton;
+import android.widget.RadioButton;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -19,23 +22,86 @@ import de.thi.uxd.android.carsten.CreateSlabs.OurSelectionFragment;
 import de.thi.uxd.android.carsten.CreateSlabs.ShortBeerFragment;
 
 public class CreateFragment extends Fragment {
+    final static int[] radioIDs = {R.id.radioButton1, R.id.radioButton2, R.id.radioButton3, R.id.radioButton4};
+    private RadioButton[] radioButtons = new RadioButton[4];
+    public ViewPager viewPagerObject;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-
-
         return inflater.inflate((R.layout.fragment_create), container, false);
     }
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ViewPager viewPagerObject = (ViewPager) getActivity().findViewById(R.id.viewPager);
+
+
+        // Finds the ViewPager object from the fragment_create.xml file and assigns a PagerAdapter
+        // The instructions must be in the onViewCreated-Method, because the ViewPager-Object can first be accessed when created
+        viewPagerObject = (ViewPager) getActivity().findViewById(R.id.viewPager);
         PagerAdapter pagerAdapter = new FixedTabsPagerAdapter(getFragmentManager());
         viewPagerObject.setAdapter(pagerAdapter);
-        //fixIconSize();
+
+        viewPagerObject.setCurrentItem(0);
+
+        // Use the ToggleButtons to change the shown fragment of the ViewPagers and set the drop shadow below the card view to highlight the activated state of the related ToggleButton
+        setToggleListener();
+        viewPagerObject.addOnPageChangeListener(listener);
+
     }
 
+    private void setToggleListener() {
+
+        for (int i = 0; i < radioIDs.length; i++) {
+            radioButtons[i] = (RadioButton) getActivity().findViewById(radioIDs[i]);
+        }
+
+        // Initialized RadioButton when opened the first time
+        toggleOff(0);
+        setCardViewState();
+
+        // Sets RadioButton and CardView State when another RadioButton gets activated
+        for (int i = 0; i < radioIDs.length; i++) {
+            final int n = i;
+
+            radioButtons[i].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+                public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                    if (isChecked) {
+                        toggleOff(n);
+                        setCardViewState();
+                        viewPagerObject.setCurrentItem(n);
+                    }
+                }
+            });
+        }
+    }
+
+    private void toggleOff (int butNotMe) {
+        for (int i = 0; i < radioIDs.length; i++) {
+            if (i == butNotMe) {
+                radioButtons[i].setChecked(true);
+            } else {
+                radioButtons[i].setChecked(false);
+            }
+        }
+    }
+    private void setCardViewState() {
+
+        final int noDropShadow = 0;
+        final int createDropShadow = 16;
+
+        for (int i = 0; i < radioButtons.length; i++) {
+            CardView selectedCard = (CardView) getActivity().findViewById(radioIDs[i]).getParent().getParent();
+            if(radioButtons[i].isChecked()) {
+                selectedCard.setElevation(createDropShadow);
+            } else {
+                selectedCard.setElevation(noDropShadow);
+            }
+        }
+    }
+
+    // Returns the correct Fragment
     private class FixedTabsPagerAdapter extends FragmentPagerAdapter {
         public FixedTabsPagerAdapter(FragmentManager fm) {
             super(fm);
@@ -52,6 +118,7 @@ public class CreateFragment extends Fragment {
                 case 0:
                     return new OurSelectionFragment();
                 case 1:
+
                     return new LemonadeFragment();
                 case 2:
                     return new ShortBeerFragment();
@@ -63,23 +130,23 @@ public class CreateFragment extends Fragment {
         }
     }
 
-    /* to override the standard icon size of the bottom navigation view of the Slab-Selection
-    private void fixIconSize(){
-        BottomNavigationView bottomNavigationView = (BottomNavigationView) getActivity().findViewById(R.id.create_navigation);
-        BottomNavigationMenuView menuView = (BottomNavigationMenuView) bottomNavigationView.getChildAt(0);
+    private ViewPager.OnPageChangeListener listener = new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-
-
-        for (int i = 0; i < menuView.getChildCount(); i++) {
-            final View iconView = menuView.getChildAt(i).findViewById(com.google.android.material.R.id.icon);
-            final ViewGroup.LayoutParams layoutParams = iconView.getLayoutParams();
-            final DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
-            // set your height here
-            layoutParams.height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 320, displayMetrics);
-            // set your width here
-            layoutParams.width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 320, displayMetrics);
-            iconView.setLayoutParams(layoutParams);
         }
-    }*/
+
+        @Override
+        public void onPageSelected(int position) {
+            toggleOff(position);
+            setCardViewState();
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
+    };
+
 
 }
