@@ -16,4 +16,8 @@
     <string name="homeFragment">Home</string>
     <string name="createFragment">Create</string>
     <string name="accountFragment">Profile</string>
+    <string name="our_selection">Our Selection</string>
+    <string name="lemonade">Lemonade</string>
+    <string name="beer_long">Beer (Long)</string>
+    <string name="beer_short">Beer (Short)</string>
 </resources>
