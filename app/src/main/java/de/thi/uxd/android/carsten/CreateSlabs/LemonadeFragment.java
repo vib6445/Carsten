@@ -5,11 +5,11 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -17,6 +17,8 @@ import androidx.fragment.app.Fragment;
 
 import de.thi.uxd.android.carsten.BuildConfig;
 import de.thi.uxd.android.carsten.R;
+
+import static androidx.constraintlayout.widget.Constraints.TAG;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -111,7 +113,7 @@ public class LemonadeFragment extends Fragment {
 
     public class Slab {
         SlabBottle[] slabBottles;
-        public Slab(Resources resources) {
+        private Slab(Resources resources) {
             slabBottles = new SlabBottle[12];
             // create Bottle Array of the Slab
             for (int i = 0; i < slabBottles.length; i++) {
@@ -119,18 +121,26 @@ public class LemonadeFragment extends Fragment {
             }
         }
 
-        void addToSlab(String typeOfBottle) {
+        private void addToSlab(String typeOfBottle) {
             for (SlabBottle slabBottle : slabBottles) {
                 if (slabBottle._bottleType.equals("empty")) {
                     slabBottle._bottleType = typeOfBottle;
-                    slabBottle._imageButton.setImageResource(R.drawable.ic_button_plus);
+                    int resID;
+                    switch (slabBottle._bottleType) {
+                        case "cc": resID = R.drawable.ic_coke; break;
+                        case "sp": resID = R.drawable.ic_sprite; break;
+                        case "mm": resID = R.drawable.ic_mmix; break;
+                        case "ft": resID = R.drawable.ic_fanta; break;
+                        default: resID = R.drawable.drink_slot_empty; break;
+                    }
+                    slabBottle._imageButton.setImageResource(resID);
                     return;
                 }
             }
 
         }
 
-        void removeFromSlab(String typeOfBottle) {
+        private void removeFromSlab(String typeOfBottle) {
             for (SlabBottle slabBottle : slabBottles) {
                 if (slabBottle != null && slabBottle.getType().equals(typeOfBottle)) {
                     slabBottle._bottleType = "empty";
@@ -143,16 +153,25 @@ public class LemonadeFragment extends Fragment {
         private void sortSlab() {
             for (int i = 0; i < slabBottles.length; i++) {
                 if (slabBottles[i]._bottleType.equals("empty") && i+1 < slabBottles.length) {
-                    SlabBottle tempBottle = slabBottles[i];
-                    slabBottles[i] = slabBottles[i+1];
-                    slabBottles[i+1] = tempBottle;
-                    Toast.makeText(getContext(), i+ ": SORT", Toast.LENGTH_SHORT).show();
+                    SlabBottle tempBottle = new SlabBottle(getContext());
+                    tempBottle._bottleType = slabBottles[i]._bottleType;
+                    slabBottles[i]._bottleType = slabBottles[i+1]._bottleType;
+                    slabBottles[i+1]._bottleType = tempBottle._bottleType;
                 }
             }
-        }
 
-        public SlabBottle getSlabBottle(int position) {
-            return slabBottles[position];
+            for (int i = 0; i < slabBottles.length; i++) {
+                int resID;
+                switch (slabBottles[i]._bottleType) {
+                    case "cc": resID = R.drawable.ic_coke; break;
+                    case "sp": resID = R.drawable.ic_sprite; break;
+                    case "mm": resID = R.drawable.ic_mmix; break;
+                    case "ft": resID = R.drawable.ic_fanta; break;
+                    default: resID = R.drawable.drink_slot_empty; break;
+                }
+                slabBottles[i]._imageButton.setImageResource(resID);
+                Log.d(TAG, "sortSlab " + i + ": " + slabBottles[i]._bottleType);
+            }
         }
     }
 
