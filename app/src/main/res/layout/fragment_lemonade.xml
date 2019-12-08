@@ -240,8 +240,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/textView7"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="35dp"
-                    tools:layout_conversion_absoluteWidth="63dp"
-                    android:layout_margin=""/>
+                    tools:layout_conversion_absoluteWidth="63dp"/>
 
                 <TextView
                     android:id="@+id/textView7"
