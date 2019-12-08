@@ -15,8 +15,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingTop="20dp">
+            android:orientation="vertical" >
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -167,26 +166,19 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingLeft="120dp"
-                android:layout_marginBottom="20dp"
-                >
+                android:paddingLeft="132dp">
 
                 <TextView
                     android:id="@+id/numberOfBottles"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="10dp"
-                    android:text="12"
-                    android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/greycliffcf_heavy"/>
+                    android:text="12" />
 
                 <TextView
                     android:id="@+id/remainingText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="bottles remaining"
-                    android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/greycliffcf_regular"/>
+                    android:text="bottles remaining" />
 
             </LinearLayout>
 
@@ -196,15 +188,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="10dp">
+                android:layout_marginRight="20dp">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/ccImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_icon_lemonade_list"
+                    android:src="@drawable/icon_lemonade"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="80dp"
@@ -212,59 +202,53 @@
 
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/ccTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Coca Cola"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorBlack"
-                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintStart_toEndOf="@+id/ccImage"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="59dp" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/ccType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/greycliffcf_regular"
                     android:text="1.0 liter PET"
-                    android:textColor="@color/colorGrey"
-                    app:layout_constraintStart_toStartOf="@+id/textView3"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3"
+                    app:layout_constraintStart_toEndOf="@+id/ccImage"
+                    app:layout_constraintTop_toBottomOf="@+id/ccTitle"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/ccPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/greycliffcf_regular"
-                    android:textColor="@color/colorBlack"
                     android:text="1.90 $"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/ccImage"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
 
                 <ImageButton
-                    android:id="@+id/imageButton26"
+                    android:id="@+id/ccRemove"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_button_minus_disabled"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView7"
+                    app:layout_constraintEnd_toStartOf="@+id/ccAmount"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="35dp"
                     tools:layout_conversion_absoluteWidth="63dp"
                     android:layout_marginRight="20dp"
                     android:background="@null"/>
+                    tools:layout_conversion_absoluteWidth="63dp" />
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/ccAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -272,13 +256,13 @@
                     android:textSize="18sp"
                     android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageButton27"
+                    app:layout_constraintEnd_toStartOf="@+id/ccAdd"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="19dp"
                     tools:layout_conversion_absoluteWidth="83dp" />
 
                 <ImageButton
-                    android:id="@+id/imageButton27"
+                    android:id="@+id/ccAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_button_plus"
@@ -297,15 +281,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="10dp">
+                android:layout_marginRight="20dp">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/spImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_icon_lemonade_list"
+                    android:src="@drawable/icon_lemonade"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="80dp"
@@ -313,49 +295,44 @@
 
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/spTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Sprite"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorBlack"
-                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintStart_toEndOf="@+id/spImage"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="59dp" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/spType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1.0 liter PET"
-                    app:layout_constraintStart_toStartOf="@+id/textView3"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3"
+                    app:layout_constraintStart_toStartOf="@+id/spTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/spTitle"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/spPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/greycliffcf_regular"
-                    android:textColor="@color/colorBlack"
                     android:text="1.90 $"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintBottom_toBottomOf="@+id/spImage"
+                    app:layout_constraintStart_toEndOf="@+id/spImage"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
 
                 <ImageButton
-                    android:id="@+id/imageButton26"
+                    android:id="@+id/spRemove"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_button_minus_disabled"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView7"
+                    app:layout_constraintEnd_toStartOf="@+id/spAmount"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="35dp"
                     tools:layout_conversion_absoluteWidth="63dp"
@@ -363,7 +340,7 @@
                     android:background="@null"/>
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/spAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -371,13 +348,13 @@
                     android:textSize="18sp"
                     android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageButton27"
+                    app:layout_constraintEnd_toStartOf="@+id/spAdd"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="19dp"
                     tools:layout_conversion_absoluteWidth="83dp" />
 
                 <ImageButton
-                    android:id="@+id/imageButton27"
+                    android:id="@+id/spAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_button_plus"
@@ -396,15 +373,13 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="10dp">
+                android:layout_marginRight="20dp">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/mmImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_icon_lemonade_list"
+                    android:src="@drawable/icon_lemonade"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="80dp"
@@ -412,49 +387,43 @@
 
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/mmTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Mezzo Mix"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorBlack"
-                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintStart_toEndOf="@+id/mmImage"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="59dp" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/mmType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1.0 liter PET"
-                    app:layout_constraintStart_toStartOf="@+id/textView3"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3"
+                    app:layout_constraintStart_toStartOf="@+id/mmTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/mmTitle"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/mmPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/greycliffcf_regular"
-                    android:textColor="@color/colorBlack"
                     android:text="1.90 $"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintBottom_toBottomOf="@+id/mmImage"
+                    app:layout_constraintStart_toEndOf="@+id/mmImage"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
 
                 <ImageButton
-                    android:id="@+id/imageButton26"
+                    android:id="@+id/mmRemove"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_button_minus_disabled"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView7"
+                    app:layout_constraintEnd_toStartOf="@+id/mmAmount"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="35dp"
                     tools:layout_conversion_absoluteWidth="63dp"
@@ -462,7 +431,7 @@
                     android:background="@null"/>
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/mmAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -470,13 +439,13 @@
                     android:textSize="18sp"
                     android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageButton27"
+                    app:layout_constraintEnd_toStartOf="@+id/mmAdd"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="19dp"
                     tools:layout_conversion_absoluteWidth="83dp" />
 
                 <ImageButton
-                    android:id="@+id/imageButton27"
+                    android:id="@+id/mmAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_button_plus"
@@ -495,15 +464,13 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="25dp"
-                android:layout_marginBottom="20dp"
-                android:layout_marginLeft="10dp">
+                android:layout_marginRight="20dp">
 
                 <ImageView
-                    android:id="@+id/imageView"
+                    android:id="@+id/ftImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_icon_lemonade_list"
+                    android:src="@drawable/icon_lemonade"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="80dp"
@@ -511,49 +478,43 @@
 
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/ftTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Fanta"
-                    android:textSize="18sp"
-                    android:textColor="@color/colorBlack"
-                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintStart_toEndOf="@+id/ftImage"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="59dp" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/ftType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1.0 liter PET"
-                    app:layout_constraintStart_toStartOf="@+id/textView3"
-                    app:layout_constraintTop_toBottomOf="@+id/textView3"
+                    app:layout_constraintStart_toStartOf="@+id/ftTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/ftTitle"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
                 <TextView
-                    android:id="@+id/textView5"
+                    android:id="@+id/ftPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/greycliffcf_regular"
-                    android:textColor="@color/colorBlack"
                     android:text="1.90 $"
-                    android:textSize="18sp"
-                    app:layout_constraintBottom_toBottomOf="@+id/imageView"
-                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintBottom_toBottomOf="@+id/ftImage"
+                    app:layout_constraintStart_toEndOf="@+id/ftImage"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
 
                 <ImageButton
-                    android:id="@+id/imageButton26"
+                    android:id="@+id/ftRemove"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_button_minus_disabled"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/textView7"
+                    app:layout_constraintEnd_toStartOf="@+id/ftAmount"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="35dp"
                     tools:layout_conversion_absoluteWidth="63dp"
@@ -561,7 +522,7 @@
                     android:background="@null"/>
 
                 <TextView
-                    android:id="@+id/textView7"
+                    android:id="@+id/ftAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"
@@ -569,13 +530,13 @@
                     android:textSize="18sp"
                     android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/imageButton27"
+                    app:layout_constraintEnd_toStartOf="@+id/ftAdd"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="19dp"
                     tools:layout_conversion_absoluteWidth="83dp" />
 
                 <ImageButton
-                    android:id="@+id/imageButton27"
+                    android:id="@+id/ftAdd"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/ic_button_plus"

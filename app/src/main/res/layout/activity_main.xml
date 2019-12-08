@@ -11,7 +11,7 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/top_navigation"
         android:layout_width="280dp"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_alignParentTop="true"
         app:menu="@menu/top_navigation"
         android:background="@drawable/main_navigation_background"
