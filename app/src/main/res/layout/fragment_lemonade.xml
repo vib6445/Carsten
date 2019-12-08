@@ -10,7 +10,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -20,7 +21,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="210dp">
+                android:layout_height="210dp"
+                android:layout_marginTop="10dp">
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
@@ -200,16 +202,16 @@
                 android:layout_marginBottom="20dp"
                 android:layout_marginLeft="10dp">
 
+
                 <ImageView
                     android:id="@+id/ccImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/icon_lemonade"
+                    android:src="@drawable/ic_icon_lemonade_list"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="80dp"
                     tools:layout_conversion_absoluteWidth="104dp" />
-
 
                 <TextView
                     android:id="@+id/ccTitle"
@@ -219,7 +221,6 @@
                     android:text="Coca Cola"
                     android:textSize="18sp"
                     android:textColor="@color/colorBlack"
-                    app:layout_constraintBottom_toTopOf="@+id/ccType"
                     app:layout_constraintStart_toEndOf="@+id/ccImage"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
@@ -232,11 +233,11 @@
                     android:fontFamily="@font/greycliffcf_regular"
                     android:text="1.0 liter PET"
                     android:textColor="@color/colorGrey"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/ccImage"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/ccTitle"
+                    app:layout_constraintTop_toBottomOf="@id/ccTitle"
                     tools:layout_conversion_absoluteHeight="27dp"
-                    tools:layout_conversion_absoluteWidth="82dp" />
+                    tools:layout_conversion_absoluteWidth="82dp"
+                    android:layout_marginBottom="5dp"/>
 
                 <TextView
                     android:id="@+id/textView5"
@@ -250,7 +251,7 @@
                     app:layout_constraintStart_toEndOf="@+id/ccImage"
                     app:layout_constraintTop_toBottomOf="@+id/ccType"
                     tools:layout_conversion_absoluteHeight="27dp"
-                    tools:layout_conversion_absoluteWidth="82dp" />
+                    tools:layout_conversion_absoluteWidth="82dp"/>
 
 
                 <ImageButton
@@ -300,15 +301,15 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_marginEnd="25dp"
+                android:layout_marginRight="25dp"
                 android:layout_marginBottom="20dp"
-                android:layout_marginStart="10dp">
+                android:layout_marginLeft="10dp">
 
                 <ImageView
                     android:id="@+id/spImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/icon_lemonade"
+                    android:src="@drawable/ic_icon_lemonade_list"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="80dp"
@@ -332,11 +333,14 @@
                     android:id="@+id/spType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/greycliffcf_regular"
                     android:text="1.0 liter PET"
+                    android:textColor="@color/colorGrey"
                     app:layout_constraintStart_toStartOf="@+id/spTitle"
                     app:layout_constraintTop_toBottomOf="@+id/spTitle"
                     tools:layout_conversion_absoluteHeight="27dp"
-                    tools:layout_conversion_absoluteWidth="82dp" />
+                    tools:layout_conversion_absoluteWidth="82dp"
+                    android:layout_marginBottom="5dp"/>
 
                 <TextView
                     android:id="@+id/spPrice"
@@ -349,7 +353,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/spImage"
                     app:layout_constraintStart_toEndOf="@+id/spImage"
                     tools:layout_conversion_absoluteHeight="27dp"
-                    tools:layout_conversion_absoluteWidth="82dp" />
+                    tools:layout_conversion_absoluteWidth="82dp"/>
 
 
                 <ImageButton
@@ -377,7 +381,7 @@
                     app:layout_constraintEnd_toStartOf="@+id/spAdd"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="19dp"
-                    tools:layout_conversion_absoluteWidth="83dp" />
+                    tools:layout_conversion_absoluteWidth="83dp"/>
 
                 <ImageButton
                     android:id="@+id/spAdd"
@@ -407,7 +411,7 @@
                     android:id="@+id/mmImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/icon_lemonade"
+                    android:src="@drawable/ic_icon_lemonade_list"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="80dp"
@@ -432,10 +436,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1.0 liter PET"
+                    android:textColor="@color/colorGrey"
+                    android:fontFamily="@font/greycliffcf_regular"
                     app:layout_constraintStart_toStartOf="@+id/mmTitle"
                     app:layout_constraintTop_toBottomOf="@+id/mmTitle"
                     tools:layout_conversion_absoluteHeight="27dp"
-                    tools:layout_conversion_absoluteWidth="82dp" />
+                    tools:layout_conversion_absoluteWidth="82dp"
+                    android:layout_marginBottom="5dp"/>
 
                 <TextView
                     android:id="@+id/mmPrice"
@@ -448,7 +455,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/mmImage"
                     app:layout_constraintStart_toEndOf="@+id/mmImage"
                     tools:layout_conversion_absoluteHeight="27dp"
-                    tools:layout_conversion_absoluteWidth="82dp" />
+                    tools:layout_conversion_absoluteWidth="82dp"/>
 
 
                 <ImageButton
@@ -506,7 +513,7 @@
                     android:id="@+id/ftImage"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/icon_lemonade"
+                    android:src="@drawable/ic_icon_lemonade_list"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="80dp"
@@ -519,6 +526,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Fanta"
+                    android:textColor="@color/colorBlack"
                     android:textSize="18sp"
                     app:layout_constraintStart_toEndOf="@+id/ftImage"
                     app:layout_constraintTop_toTopOf="parent"
@@ -530,10 +538,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1.0 liter PET"
+                    android:textColor="@color/colorGrey"
+                    android:fontFamily="@font/greycliffcf_regular"
                     app:layout_constraintStart_toStartOf="@+id/ftTitle"
                     app:layout_constraintTop_toBottomOf="@+id/ftTitle"
                     tools:layout_conversion_absoluteHeight="27dp"
-                    tools:layout_conversion_absoluteWidth="82dp" />
+                    tools:layout_conversion_absoluteWidth="82dp"
+                    android:layout_marginBottom="5dp"/>
 
                 <TextView
                     android:id="@+id/ftPrice"
@@ -546,7 +557,7 @@
                     app:layout_constraintBottom_toBottomOf="@+id/ftImage"
                     app:layout_constraintStart_toEndOf="@+id/ftImage"
                     tools:layout_conversion_absoluteHeight="27dp"
-                    tools:layout_conversion_absoluteWidth="82dp" />
+                    tools:layout_conversion_absoluteWidth="82dp"/>
 
 
                 <ImageButton

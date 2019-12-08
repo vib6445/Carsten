@@ -10,12 +10,14 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/top_navigation"
-        android:layout_width="280dp"
-        android:layout_height="80dp"
+        android:layout_width="230dp"
+        android:layout_height="65dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        app:menu="@menu/top_navigation"
+        android:layout_marginStart="0dp"
         android:background="@drawable/main_navigation_background"
-        android:elevation="800dp" />
+        android:elevation="800dp"
+        app:menu="@menu/top_navigation" />
 
     <FrameLayout
         android:id="@+id/fragment_container"
