@@ -3,6 +3,7 @@ package de.thi.uxd.android.carsten.CreateSlabs;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +14,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentActivity;
 
 import de.thi.uxd.android.carsten.BuildConfig;
 import de.thi.uxd.android.carsten.R;
@@ -23,9 +23,10 @@ import de.thi.uxd.android.carsten.R;
  */
 public class LemonadeFragment extends Fragment {
 
-    final String[] typesOfDrinks = {"cc", "sp", "mm", "ft"};
-    final ImageButton[] removeButtons = new ImageButton[4];
-    final ImageButton[] addButtons = new ImageButton[4];
+    private final String[] typesOfDrinks = {"cc", "sp", "mm", "ft"};
+    private final ImageButton[] removeButtons = new ImageButton[4];
+    private final ImageButton[] addButtons = new ImageButton[4];
+    private final int[] resIDs = {R.id.imageButton1, R.id.imageButton2, R.id.imageButton3, R.id.imageButton4, R.id.imageButton5, R.id.imageButton6, R.id.imageButton7, R.id.imageButton8, R.id.imageButton9, R.id.imageButton10, R.id.imageButton11, R.id.imageButton12};
 
     private Slab slab;
 
@@ -46,12 +47,11 @@ public class LemonadeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        slab = new Slab(getActivity());
+        slab = new Slab(getResources());
         addClickListener();
-
     }
 
-    public void addClickListener() {
+    private void addClickListener() {
 
         // add Listener to the add and remove buttons
         for (int i = 0; i < removeButtons.length; i++) {
@@ -86,6 +86,12 @@ public class LemonadeFragment extends Fragment {
     }
 
 
+
+
+
+
+
+
     @SuppressLint("AppCompatCustomView")
     public class SlabBottle extends ImageButton {
         private String _bottleType;
@@ -93,10 +99,10 @@ public class LemonadeFragment extends Fragment {
         public SlabBottle(Context context) {
             super(context);
         }
-        public SlabBottle(Context context, String bottleType, ImageButton imageButton) {
+        public SlabBottle(Context context, String bottleType, int resID) {
             super(context);
             this._bottleType = bottleType;
-            this._imageButton = imageButton;
+            this._imageButton = (ImageButton) getActivity().findViewById(resIDs[resID]);
         }
         public String getType() {
             return _bottleType;
@@ -105,44 +111,42 @@ public class LemonadeFragment extends Fragment {
 
     public class Slab {
         SlabBottle[] slabBottles;
-        public Slab(FragmentActivity activity) {
-            slabBottles = new SlabBottle[9];
+        public Slab(Resources resources) {
+            slabBottles = new SlabBottle[12];
             // create Bottle Array of the Slab
             for (int i = 0; i < slabBottles.length; i++) {
-                int resID = activity.getResources().getIdentifier("imageButton" + i, "id", BuildConfig.APPLICATION_ID);
-                slabBottles[i] = new SlabBottle(getContext(), "empty", (ImageButton) getActivity().findViewById(resID));
-                Toast.makeText(getContext(), slabBottles[i]._bottleType + i, Toast.LENGTH_LONG).show();
+                slabBottles[i] = new SlabBottle(getContext(), "empty", i);
             }
         }
 
-        public void addToSlab(String typeOfBottle) {
-            for (int i = 0; i < slabBottles.length; i++) {
-                if (slabBottles[i]._bottleType.equals("empty")) {
-                    slabBottles[i]._bottleType = typeOfBottle;
-                    slabBottles[i]._imageButton.setImageResource(R.drawable.ic_button_plus);
-                    Toast.makeText(getContext(), "Test", Toast.LENGTH_SHORT).show();
+        void addToSlab(String typeOfBottle) {
+            for (SlabBottle slabBottle : slabBottles) {
+                if (slabBottle._bottleType.equals("empty")) {
+                    slabBottle._bottleType = typeOfBottle;
+                    slabBottle._imageButton.setImageResource(R.drawable.ic_button_plus);
                     return;
                 }
-                Toast.makeText(getContext(), slabBottles[i]._bottleType, Toast.LENGTH_SHORT).show();
             }
 
         }
 
-        public void removeFromSlab(String typeOfBottle) {
-            for (int i = 0; i < slabBottles.length; i++) {
-                if (slabBottles[i] != null && slabBottles[i].getType().equals(typeOfBottle)); {
-                    slabBottles[i]._bottleType = "empty";
+        void removeFromSlab(String typeOfBottle) {
+            for (SlabBottle slabBottle : slabBottles) {
+                if (slabBottle != null && slabBottle.getType().equals(typeOfBottle)) {
+                    slabBottle._bottleType = "empty";
+                    slabBottle._imageButton.setImageResource(R.drawable.drink_slot_empty);
                     sortSlab();
-                    break;
+                    return;
                 }
             }
         }
         private void sortSlab() {
             for (int i = 0; i < slabBottles.length; i++) {
-                if (slabBottles[i]._bottleType.equals("empty") && i+1 < slabBottles.length && slabBottles[i+1] != null) {
+                if (slabBottles[i]._bottleType.equals("empty") && i+1 < slabBottles.length) {
+                    SlabBottle tempBottle = slabBottles[i];
                     slabBottles[i] = slabBottles[i+1];
-                    slabBottles[i+1]._bottleType = "empty";
-
+                    slabBottles[i+1] = tempBottle;
+                    Toast.makeText(getContext(), i+ ": SORT", Toast.LENGTH_SHORT).show();
                 }
             }
         }
