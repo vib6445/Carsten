@@ -27,9 +27,9 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="20dp"
             android:text="Welcome, Vincenzo!"
-            android:fontFamily="@font/greycliffcf_regular"
+            android:fontFamily="@font/greycliffcf_extrabold"
             android:textColor="#000"
-            android:textSize="30sp"
+            android:textSize="40sp"
             android:textStyle="bold"/>
 
         <GridLayout
@@ -42,7 +42,7 @@
             android:rowCount="2">
 
             <Button
-                android:id="@+id/button_newOrder"
+                android:id="@+id/btn_newOrder"
                 android:layout_width="@dimen/box_size"
                 android:layout_height="@dimen/box_size"
                 android:layout_columnWeight="1"
@@ -52,6 +52,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:text="New Order"
+                android:fontFamily="@font/greycliffcf_bold"
                 android:textAllCaps="false"
                 android:textSize="17sp"
                 android:gravity="top"
@@ -61,7 +62,7 @@
                 android:drawableBottom="@drawable/ic_orderlogo_white"/>
 
             <Button
-                android:id="@+id/button_deliveryStatus"
+                android:id="@+id/btn_deliveryStatus"
                 android:layout_width="@dimen/box_size"
                 android:layout_height="@dimen/box_size"
                 android:layout_columnWeight="1"
@@ -71,6 +72,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:text="Delivery\nStatus"
+                android:fontFamily="@font/greycliffcf_bold"
                 android:textAllCaps="false"
                 android:textSize="17sp"
                 android:gravity="top"
@@ -80,7 +82,7 @@
                 android:drawableBottom="@drawable/ic_deliverylogo_white"/>
 
             <Button
-                android:id="@+id/button-profile"
+                android:id="@+id/btn_profile"
                 android:layout_width="@dimen/box_size"
                 android:layout_height="@dimen/box_size"
                 android:layout_columnWeight="1"
@@ -90,6 +92,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:text="Profile"
+                android:fontFamily="@font/greycliffcf_bold"
                 android:textAllCaps="false"
                 android:textSize="17sp"
                 android:gravity="top"
@@ -99,7 +102,7 @@
                 android:drawableBottom="@drawable/ic_profilelogo_white"/>
 
             <Button
-                android:id="@+id/button3"
+                android:id="@+id/btn_tbd"
                 android:layout_width="@dimen/box_size"
                 android:layout_height="@dimen/box_size"
                 android:layout_columnWeight="1"
@@ -109,6 +112,7 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
                 android:text="TBD"
+                android:fontFamily="@font/greycliffcf_bold"
                 android:textAllCaps="false"
                 android:textSize="17sp"
                 android:gravity="top"
