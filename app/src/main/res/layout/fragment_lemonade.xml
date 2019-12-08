@@ -15,7 +15,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:paddingTop="20dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -166,19 +167,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingLeft="132dp">
+                android:paddingLeft="120dp"
+                android:layout_marginBottom="20dp"
+                >
 
                 <TextView
                     android:id="@+id/numberOfBottles"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12" />
+                    android:layout_marginRight="10dp"
+                    android:text="12"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/greycliffcf_heavy"/>
 
                 <TextView
                     android:id="@+id/remainingText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="bottles remaining" />
+                    android:text="bottles remaining"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/greycliffcf_regular"/>
 
             </LinearLayout>
 

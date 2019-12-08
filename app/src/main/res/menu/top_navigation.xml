@@ -3,16 +3,19 @@
 
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/homeFragment" />
+        android:icon="@drawable/ic_homeicon"
+        android:title="@string/homeFragment"
+        android:iconTint="@color/colorBlack"/>
 
     <item
         android:id="@+id/nave_create"
-        android:icon="@drawable/ic_add_box_black_24dp"
-        android:title="@string/createFragment" />
+        android:icon="@drawable/ic_crateicon"
+        android:title="@string/createFragment"
+        android:iconTint="@color/colorBlack"/>
 
     <item
         android:id="@+id/nave_account"
-        android:icon="@drawable/ic_account_circle_black_24dp"
-        android:title="@string/accountFragment" />
+        android:icon="@drawable/ic_profileicon"
+        android:title="@string/accountFragment"
+        android:iconTint="@color/colorBlack"/>
 </menu>
