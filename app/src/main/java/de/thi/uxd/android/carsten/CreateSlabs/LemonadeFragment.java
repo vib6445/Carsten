@@ -145,6 +145,9 @@ public class LemonadeFragment extends Fragment {
                 if (slabBottle != null && slabBottle.getType().equals(typeOfBottle)) {
                     slabBottle._bottleType = "empty";
                     slabBottle._imageButton.setImageResource(R.drawable.drink_slot_empty);
+
+
+
                     sortSlab();
                     return;
                 }

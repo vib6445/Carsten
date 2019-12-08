@@ -15,7 +15,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical"
+            android:paddingTop="20dp">
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -166,19 +167,26 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:paddingLeft="132dp">
+                android:paddingLeft="120dp"
+                android:layout_marginBottom="20dp"
+                >
 
                 <TextView
                     android:id="@+id/numberOfBottles"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="12" />
+                    android:layout_marginRight="10dp"
+                    android:text="12"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/greycliffcf_heavy"/>
 
                 <TextView
                     android:id="@+id/remainingText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="bottles remaining" />
+                    android:text="bottles remaining"
+                    android:textColor="@color/colorBlack"
+                    android:fontFamily="@font/greycliffcf_regular"/>
 
             </LinearLayout>
 
@@ -188,7 +196,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="20dp">
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp">
 
                 <ImageView
                     android:id="@+id/ccImage"
@@ -207,6 +217,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Coca Cola"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlack"
+                    app:layout_constraintBottom_toTopOf="@+id/ccType"
                     app:layout_constraintStart_toEndOf="@+id/ccImage"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
@@ -216,19 +229,26 @@
                     android:id="@+id/ccType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/greycliffcf_regular"
                     android:text="1.0 liter PET"
+                    android:textColor="@color/colorGrey"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ccImage"
-                    app:layout_constraintTop_toBottomOf="@+id/ccTitle"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
                 <TextView
-                    android:id="@+id/ccPrice"
+                    android:id="@+id/textView5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/greycliffcf_regular"
+                    android:textColor="@color/colorBlack"
                     android:text="1.90 $"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@+id/ccImage"
+                    app:layout_constraintTop_toBottomOf="@+id/ccType"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
@@ -243,9 +263,8 @@
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="35dp"
                     tools:layout_conversion_absoluteWidth="63dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginEnd="20dp"
                     android:background="@null"/>
-                    tools:layout_conversion_absoluteWidth="63dp" />
 
                 <TextView
                     android:id="@+id/ccAmount"
@@ -281,7 +300,9 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="20dp">
+                android:layout_marginEnd="25dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginStart="10dp">
 
                 <ImageView
                     android:id="@+id/spImage"
@@ -300,6 +321,8 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Sprite"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlack"
                     app:layout_constraintStart_toEndOf="@+id/spImage"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
@@ -319,7 +342,10 @@
                     android:id="@+id/spPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/greycliffcf_regular"
+                    android:textColor="@color/colorBlack"
                     android:text="1.90 $"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/spImage"
                     app:layout_constraintStart_toEndOf="@+id/spImage"
                     tools:layout_conversion_absoluteHeight="27dp"
@@ -373,7 +399,9 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="20dp">
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp">
 
                 <ImageView
                     android:id="@+id/mmImage"
@@ -390,7 +418,10 @@
                     android:id="@+id/mmTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Mezzo Mix"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorBlack"
                     app:layout_constraintStart_toEndOf="@+id/mmImage"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
@@ -410,7 +441,10 @@
                     android:id="@+id/mmPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/greycliffcf_regular"
+                    android:textColor="@color/colorBlack"
                     android:text="1.90 $"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/mmImage"
                     app:layout_constraintStart_toEndOf="@+id/mmImage"
                     tools:layout_conversion_absoluteHeight="27dp"
@@ -464,7 +498,9 @@
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
                 android:layout_marginTop="8dp"
-                android:layout_marginRight="20dp">
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="10dp">
 
                 <ImageView
                     android:id="@+id/ftImage"
@@ -481,7 +517,9 @@
                     android:id="@+id/ftTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Fanta"
+                    android:textSize="18sp"
                     app:layout_constraintStart_toEndOf="@+id/ftImage"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
@@ -501,7 +539,10 @@
                     android:id="@+id/ftPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/greycliffcf_regular"
+                    android:textColor="@color/colorBlack"
                     android:text="1.90 $"
+                    android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/ftImage"
                     app:layout_constraintStart_toEndOf="@+id/ftImage"
                     tools:layout_conversion_absoluteHeight="27dp"
