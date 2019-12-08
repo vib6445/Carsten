@@ -20,7 +20,8 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="210dp">
+                android:layout_height="230dp"
+                >
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
@@ -30,7 +31,11 @@
                     app:cardCornerRadius="4dp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent">
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginTop="15dp"
+                    android:rotation="90"
+                    android:scaleY="-1.5"
+                    android:scaleX="1.5">
 
                     <TableLayout
                         android:layout_width="150dp"
