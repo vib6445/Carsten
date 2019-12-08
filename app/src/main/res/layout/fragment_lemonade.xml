@@ -298,6 +298,7 @@
                     android:id="@+id/spTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Sprite"
                     app:layout_constraintStart_toEndOf="@+id/spImage"
                     app:layout_constraintTop_toTopOf="parent"
