@@ -32,166 +32,170 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:layout_marginTop="15dp"
-                    android:rotation="90"
-                    android:scaleY="-1.5"
-                    android:scaleX="1.5">
+                    android:layout_marginTop="2dp">
 
-                    <TableLayout
-                        android:layout_width="150dp"
-                        android:layout_height="200dp"
-                        android:background="@drawable/slab_background"
-                        android:padding="4dp">
+                    <LinearLayout
+                        android:layout_width="300dp"
+                        android:layout_height="225dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/slab_vertical_background"
+                        >
 
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:orientation="horizontal">
+                        <TableLayout
+                            android:layout_width="300dp"
+                            android:layout_height="225dp"
+                            android:paddingVertical="44dp"
+                            android:paddingHorizontal="56dp"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5">
 
-                            <ImageButton
-                                android:id="@+id/imageButton1"
-                                android:layout_width="wrap_content"
+                            <TableRow
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:layout_weight="1"
-                                android:background="@null"
-                                android:src="@drawable/drink_slot_empty" />
+                                android:orientation="horizontal">
 
-                            <ImageButton
-                                android:id="@+id/imageButton2"
-                                android:layout_width="wrap_content"
+                                <ImageButton
+                                    android:id="@+id/imageButton1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:src="@drawable/drink_slot_empty" />
+
+                                <ImageButton
+                                    android:id="@+id/imageButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:src="@drawable/drink_slot_empty" />
+
+                                <ImageButton
+                                    android:id="@+id/imageButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:src="@drawable/drink_slot_empty" />
+                                <ImageButton
+                                    android:id="@+id/imageButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:src="@drawable/drink_slot_empty" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:src="@drawable/drink_slot_empty" />
+                                android:layout_weight="1">
 
-                            <ImageButton
-                                android:id="@+id/imageButton3"
-                                android:layout_width="wrap_content"
+
+                                <ImageButton
+                                    android:id="@+id/imageButton5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:src="@drawable/drink_slot_empty" />
+
+                                <ImageButton
+                                    android:id="@+id/imageButton6"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:src="@drawable/drink_slot_empty" />
+                                <ImageButton
+                                    android:id="@+id/imageButton7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:src="@drawable/drink_slot_empty" />
+
+                                <ImageButton
+                                    android:id="@+id/imageButton8"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:src="@drawable/drink_slot_empty" />
+                            </TableRow>
+
+                            <TableRow
+                                android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:src="@drawable/drink_slot_empty" />
-                        </TableRow>
+                                android:layout_weight="1">
 
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
 
-                            <ImageButton
-                                android:id="@+id/imageButton4"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:src="@drawable/drink_slot_empty" />
 
-                            <ImageButton
-                                android:id="@+id/imageButton5"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:src="@drawable/drink_slot_empty" />
+                                <ImageButton
+                                    android:id="@+id/imageButton9"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:src="@drawable/drink_slot_empty" />
+                                <ImageButton
+                                    android:id="@+id/imageButton10"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:src="@drawable/drink_slot_empty" />
 
-                            <ImageButton
-                                android:id="@+id/imageButton6"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:src="@drawable/drink_slot_empty" />
-                        </TableRow>
+                                <ImageButton
+                                    android:id="@+id/imageButton11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:src="@drawable/drink_slot_empty" />
 
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
+                                <ImageButton
+                                    android:id="@+id/imageButton12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:background="@null"
+                                    android:src="@drawable/drink_slot_empty" />
+                            </TableRow>
 
-                            <ImageButton
-                                android:id="@+id/imageButton7"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:src="@drawable/drink_slot_empty" />
+                        </TableLayout>
+                    </LinearLayout>
 
-                            <ImageButton
-                                android:id="@+id/imageButton8"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:src="@drawable/drink_slot_empty" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton9"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:src="@drawable/drink_slot_empty" />
-                        </TableRow>
-
-                        <TableRow
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1">
-
-                            <ImageButton
-                                android:id="@+id/imageButton10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:src="@drawable/drink_slot_empty" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton11"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:src="@drawable/drink_slot_empty" />
-
-                            <ImageButton
-                                android:id="@+id/imageButton12"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_weight="1"
-                                android:background="@null"
-                                android:src="@drawable/drink_slot_empty" />
-                        </TableRow>
-                    </TableLayout>
                 </androidx.cardview.widget.CardView>
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:paddingLeft="120dp"
                 android:layout_marginBottom="20dp"
-                >
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp">
 
                 <TextView
                     android:id="@+id/numberOfBottles"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="10dp"
+                    android:fontFamily="@font/greycliffcf_heavy"
                     android:text="12"
-                    android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/greycliffcf_heavy"/>
+                    android:textColor="@color/colorBlack" />
 
                 <TextView
                     android:id="@+id/remainingText"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/greycliffcf_regular"
                     android:text="bottles remaining"
-                    android:textColor="@color/colorBlack"
-                    android:fontFamily="@font/greycliffcf_regular"/>
+                    android:textColor="@color/colorBlack" />
 
             </LinearLayout>
 
@@ -262,25 +266,25 @@
                     android:id="@+id/ccRemove"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="64dp"
+                    android:background="@null"
                     android:src="@drawable/ic_button_minus_disabled"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/ccAmount"
+                    app:layout_constraintEnd_toStartOf="@+id/ccAdd"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="35dp"
-                    tools:layout_conversion_absoluteWidth="63dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@null"/>
+                    tools:layout_conversion_absoluteWidth="63dp" />
 
                 <TextView
                     android:id="@+id/ccAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
                     android:fontFamily="@font/greycliffcf_medium"
+                    android:text="0"
                     android:textSize="18sp"
-                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/ccAdd"
+                    app:layout_constraintStart_toEndOf="@+id/ccRemove"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="19dp"
                     tools:layout_conversion_absoluteWidth="83dp" />
@@ -326,8 +330,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Sprite"
-                    android:textSize="18sp"
                     android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/spType"
                     app:layout_constraintStart_toEndOf="@+id/spImage"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
@@ -338,8 +343,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1.0 liter PET"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/spTitle"
-                    app:layout_constraintTop_toBottomOf="@+id/spTitle"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
@@ -348,11 +354,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/greycliffcf_regular"
-                    android:textColor="@color/colorBlack"
                     android:text="1.90 $"
+                    android:textColor="@color/colorBlack"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/spImage"
                     app:layout_constraintStart_toEndOf="@+id/spImage"
+                    app:layout_constraintTop_toBottomOf="@+id/spType"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
@@ -361,25 +368,25 @@
                     android:id="@+id/spRemove"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="64dp"
+                    android:background="@null"
                     android:src="@drawable/ic_button_minus_disabled"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/spAmount"
+                    app:layout_constraintEnd_toStartOf="@+id/spAdd"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="35dp"
-                    tools:layout_conversion_absoluteWidth="63dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@null"/>
+                    tools:layout_conversion_absoluteWidth="63dp" />
 
                 <TextView
                     android:id="@+id/spAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
                     android:fontFamily="@font/greycliffcf_medium"
+                    android:text="0"
                     android:textSize="18sp"
-                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/spAdd"
+                    app:layout_constraintStart_toEndOf="@+id/spRemove"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="19dp"
                     tools:layout_conversion_absoluteWidth="83dp" />
@@ -425,8 +432,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Mezzo Mix"
-                    android:textSize="18sp"
                     android:textColor="@color/colorBlack"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/mmType"
                     app:layout_constraintStart_toEndOf="@+id/mmImage"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
@@ -437,8 +445,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1.0 liter PET"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/mmTitle"
-                    app:layout_constraintTop_toBottomOf="@+id/mmTitle"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
@@ -447,11 +456,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/greycliffcf_regular"
-                    android:textColor="@color/colorBlack"
                     android:text="1.90 $"
+                    android:textColor="@color/colorBlack"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/mmImage"
                     app:layout_constraintStart_toEndOf="@+id/mmImage"
+                    app:layout_constraintTop_toBottomOf="@+id/mmType"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
@@ -460,25 +470,25 @@
                     android:id="@+id/mmRemove"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="64dp"
+                    android:background="@null"
                     android:src="@drawable/ic_button_minus_disabled"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/mmAmount"
+                    app:layout_constraintEnd_toStartOf="@+id/mmAdd"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="35dp"
-                    tools:layout_conversion_absoluteWidth="63dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@null"/>
+                    tools:layout_conversion_absoluteWidth="63dp" />
 
                 <TextView
                     android:id="@+id/mmAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
                     android:fontFamily="@font/greycliffcf_medium"
+                    android:text="0"
                     android:textSize="18sp"
-                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/mmAdd"
+                    app:layout_constraintStart_toEndOf="@+id/mmRemove"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="19dp"
                     tools:layout_conversion_absoluteWidth="83dp" />
@@ -524,7 +534,9 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/greycliffcf_heavy"
                     android:text="Fanta"
+                    android:textColor="@color/colorBlack"
                     android:textSize="18sp"
+                    app:layout_constraintBottom_toTopOf="@+id/ftType"
                     app:layout_constraintStart_toEndOf="@+id/ftImage"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
@@ -535,8 +547,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="1.0 liter PET"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/ftTitle"
-                    app:layout_constraintTop_toBottomOf="@+id/ftTitle"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
@@ -545,11 +558,12 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/greycliffcf_regular"
-                    android:textColor="@color/colorBlack"
                     android:text="1.90 $"
+                    android:textColor="@color/colorBlack"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/ftImage"
                     app:layout_constraintStart_toEndOf="@+id/ftImage"
+                    app:layout_constraintTop_toBottomOf="@+id/ftType"
                     tools:layout_conversion_absoluteHeight="27dp"
                     tools:layout_conversion_absoluteWidth="82dp" />
 
@@ -558,25 +572,26 @@
                     android:id="@+id/ftRemove"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginEnd="64dp"
+                    android:background="@null"
                     android:src="@drawable/ic_button_minus_disabled"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/ftAmount"
+                    app:layout_constraintEnd_toStartOf="@+id/ftAdd"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="35dp"
-                    tools:layout_conversion_absoluteWidth="63dp"
-                    android:layout_marginRight="20dp"
-                    android:background="@null"/>
+                    tools:layout_conversion_absoluteWidth="63dp" />
 
                 <TextView
                     android:id="@+id/ftAmount"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="0"
                     android:fontFamily="@font/greycliffcf_medium"
+                    android:gravity="center_horizontal"
+                    android:text="0"
                     android:textSize="18sp"
-                    android:layout_marginRight="20dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/ftAdd"
+                    app:layout_constraintStart_toEndOf="@+id/ftRemove"
                     app:layout_constraintTop_toTopOf="parent"
                     tools:layout_conversion_absoluteHeight="19dp"
                     tools:layout_conversion_absoluteWidth="83dp" />

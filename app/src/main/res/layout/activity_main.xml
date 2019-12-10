@@ -1,25 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@color/colorWhite"
-    >
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/top_navigation"
-        android:layout_width="280dp"
-        android:layout_height="80dp"
-        android:layout_alignParentTop="true"
-        app:menu="@menu/top_navigation"
-        android:background="@drawable/main_navigation_background"
-        android:elevation="800dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/top_navigation"
+            android:layout_width="280dp"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/main_navigation_background"
+            android:elevation="800dp"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            app:itemIconTint="@drawable/top_navigation_colors"
+            app:itemTextColor="@drawable/top_navigation_colors"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/top_navigation">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        <ImageButton
+            android:id="@+id/checkOutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="#ffffff"
+            android:clickable="true"
+            android:foregroundTint="@color/colorBlack"
+            android:tint="@color/colorBlack"
+            app:layout_constraintBottom_toBottomOf="@+id/top_navigation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/top_navigation"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.4"
+            app:srcCompat="@drawable/icon_shopping_cart" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/top_navigation">
 
-</RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

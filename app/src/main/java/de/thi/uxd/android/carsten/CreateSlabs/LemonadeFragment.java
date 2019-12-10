@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -126,14 +127,23 @@ public class LemonadeFragment extends Fragment {
                 if (slabBottle._bottleType.equals("empty")) {
                     slabBottle._bottleType = typeOfBottle;
                     int resID;
+                    int amountID;
                     switch (slabBottle._bottleType) {
-                        case "cc": resID = R.drawable.ic_coke; break;
-                        case "sp": resID = R.drawable.ic_sprite; break;
-                        case "mm": resID = R.drawable.ic_mmix; break;
-                        case "ft": resID = R.drawable.ic_fanta; break;
-                        default: resID = R.drawable.drink_slot_empty; break;
+                        case "cc": resID = R.drawable.ic_coke; amountID = R.id.ccAmount; break;
+                        case "sp": resID = R.drawable.ic_sprite; amountID = R.id.spAmount; break;
+                        case "mm": resID = R.drawable.ic_mmix; amountID = R.id.mmAmount; break;
+                        case "ft": resID = R.drawable.ic_fanta; amountID = R.id.ftAmount; break;
+                        default: return;
                     }
+
+                    TextView amountBottles = (TextView) getActivity().findViewById(amountID);
+                    amountBottles.setText(String.valueOf(Integer.parseInt(amountBottles.getText().toString()) + 1));
+
+                    TextView amountInSlab = (TextView) getActivity().findViewById(R.id.numberOfBottles);
+                    amountInSlab.setText(String.valueOf(Integer.parseInt(amountInSlab.getText().toString()) - 1));
+
                     slabBottle._imageButton.setImageResource(resID);
+
                     return;
                 }
             }
@@ -146,9 +156,23 @@ public class LemonadeFragment extends Fragment {
                     slabBottle._bottleType = "empty";
                     slabBottle._imageButton.setImageResource(R.drawable.drink_slot_empty);
 
+                    int amountID;
+                    switch (typeOfBottle) {
+                        case "cc": amountID = R.id.ccAmount; break;
+                        case "sp": amountID = R.id.spAmount; break;
+                        case "mm": amountID = R.id.mmAmount; break;
+                        case "ft": amountID = R.id.ftAmount; break;
+                        default: return;
+                    }
 
+                    TextView amountBottles = (TextView) getActivity().findViewById(amountID);
+                    amountBottles.setText(String.valueOf(Integer.parseInt(amountBottles.getText().toString()) - 1));
+
+                    TextView amountInSlab = (TextView) getActivity().findViewById(R.id.numberOfBottles);
+                    amountInSlab.setText(String.valueOf(Integer.parseInt(amountInSlab.getText().toString()) + 1));
 
                     sortSlab();
+
                     return;
                 }
             }
