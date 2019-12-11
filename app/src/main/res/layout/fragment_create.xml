@@ -7,160 +7,171 @@
     android:orientation="vertical" >
 
 
-    <RadioGroup
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:orientation="horizontal"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        app:cardBackgroundColor="#ffffff"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="8dp"
+        app:cardMaxElevation="8dp">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="0dp">
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/create_navigation_background"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp">
 
-                <RadioButton
-                    android:id="@+id/radioButton1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="9"
-                    android:button="@drawable/icon_ourselection" />
-
-                <TextView
-                    android:id="@+id/text"
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/our_selection"
-                    android:fontFamily="@font/greycliffcf_heavy"
-                    android:textColor="@color/colorBlack"
-                    android:textAlignment="center"
-                    android:textAllCaps="false"
-                    android:textSize="12sp" />
-            </LinearLayout>
+                    android:orientation="vertical">
 
-        </androidx.cardview.widget.CardView>
+                    <RadioButton
+                        android:id="@+id/radioButton1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:button="@drawable/icon_ourselection" />
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="0dp">
+                    <TextView
+                        android:id="@+id/text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/greycliffcf_heavy"
+                        android:text="@string/our_selection"
+                        android:textAlignment="center"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+                </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp">
 
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="9"
-                    android:button="@drawable/icon_lemonade" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/lemonade"
-                    android:fontFamily="@font/greycliffcf_heavy"
-                    android:textColor="@color/colorBlack"
-                    android:textAlignment="center"
-                    android:textSize="12sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="0dp">
+                    <RadioButton
+                        android:id="@+id/radioButton2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:button="@drawable/icon_lemonade" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/greycliffcf_heavy"
+                        android:text="@string/lemonade"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp">
 
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="9"
-                    android:button="@drawable/icon_shortbeer" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="@string/beer_short"
-                    android:fontFamily="@font/greycliffcf_heavy"
-                    android:textColor="@color/colorBlack"
-                    android:textAlignment="center"
-                    android:textSize="12sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:orientation="vertical">
 
-        <androidx.cardview.widget.CardView
-            android:layout_width="wrap_content"
-            android:layout_height="100dp"
-            android:layout_margin="4dp"
-            android:layout_weight="1"
-            app:cardCornerRadius="4dp"
-            app:cardElevation="0dp">
+                    <RadioButton
+                        android:id="@+id/radioButton3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:button="@drawable/icon_shortbeer" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/greycliffcf_heavy"
+                        android:text="@string/beer_short"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
+                android:layout_margin="4dp"
                 android:layout_weight="1"
-                android:orientation="vertical">
+                app:cardBackgroundColor="#ffffff"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp">
 
-                <RadioButton
-                    android:id="@+id/radioButton4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="0dp"
-                    android:layout_gravity="center"
-                    android:layout_weight="9"
-                    android:button="@drawable/icon_longbeer" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="@font/greycliffcf_heavy"
-                    android:textColor="@color/colorBlack"
-                    android:text="@string/beer_long"
-                    android:textAlignment="center"
-                    android:textSize="12sp" />
-            </LinearLayout>
-        </androidx.cardview.widget.CardView>
+                    android:orientation="vertical">
 
-    </RadioGroup>
+                    <RadioButton
+                        android:id="@+id/radioButton4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_gravity="center"
+                        android:layout_weight="9"
+                        android:button="@drawable/icon_longbeer" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/greycliffcf_heavy"
+                        android:text="@string/beer_long"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </RadioGroup>
+    </androidx.cardview.widget.CardView>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </androidx.viewpager.widget.ViewPager>
-
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
