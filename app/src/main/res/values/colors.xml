@@ -9,4 +9,5 @@
     <color name="colorMenuGrey">#c7c7c7</color>
     <color name="colorDarkGrey">#1c1c1c</color>
     <color name="nameHoverGrey">#2c2c2c</color>
+    <color name="deleteRed">#F84949</color>
 </resources>
