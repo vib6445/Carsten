@@ -39,6 +39,11 @@
         <activity
             android:name=".CartActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".CheckoutActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+
+
     </application>
 
 </manifest>
