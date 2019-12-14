@@ -2,32 +2,23 @@ package de.thi.uxd.android.carsten.CreateSlabs;
 
 import android.app.Activity;
 import android.content.Context;
-import android.view.View;
-import android.widget.ImageButton;
-import android.widget.TextView;
 
 import de.thi.uxd.android.carsten.BuildConfig;
-import de.thi.uxd.android.carsten.R;
 
 
-public class Slab {
+class Slab {
 
     private Activity activity;
 
     private SlabBottle[] slabBottles;
     private int[] drawables;
-    private String[] typesOfDrinks;
-
-    private TextView amountInSlab;
 
 
 
-    public Slab(Context context, Activity _activity, int[] resIDs, int[] fragmentDrawables, String[] _typesOfDrinks) {
+
+    Slab(Context context, Activity _activity, int[] resIDs, int[] fragmentDrawables, String[] _typesOfDrinks, String slabType) {
 
         this.activity = _activity;
-        this.typesOfDrinks = _typesOfDrinks;
-
-        amountInSlab = (TextView) activity.findViewById(R.id.numberOfBottles);
 
         // Creates the array of empty SlabBottles with the slab specific amount of slots
         slabBottles = new SlabBottle[resIDs.length];
@@ -35,15 +26,14 @@ public class Slab {
         // Receives all ImageButtons from the Fragment within the slab
         for (int i = 0; i < resIDs.length; i++) {
             int id = i + 1;
-            resIDs[i] = activity.getResources().getIdentifier("imageButton" + id, "id", BuildConfig.APPLICATION_ID);
+            resIDs[i] = activity.getResources().getIdentifier(slabType + "Button" + id, "id", BuildConfig.APPLICATION_ID);
         }
         drawables = fragmentDrawables;
 
-        fillSlabWithEmptyBottles(context, activity, resIDs);
-        setClickListener();
+        fillSlabWithEmptyBottles(context, resIDs);
     }
 
-    private void fillSlabWithEmptyBottles(Context context, Activity activity, int[] resIDs) {
+    private void fillSlabWithEmptyBottles(Context context, int[] resIDs) {
         // Fills the array of empty SlabBottles
         for (int i = 0; i < slabBottles.length; i++) {
             slabBottles[i] = new SlabBottle(context, activity, resIDs[i]);
@@ -64,7 +54,7 @@ public class Slab {
     }
 
     // Function returns a boolean so the fragment knows if the amount of bottles in the slab and the list should DECREASE
-    public boolean removeFromSlab(Activity activity, String typeOfBottle) {
+    public boolean removeFromSlab(String typeOfBottle) {
         for (SlabBottle slabBottle : slabBottles) {
 
             // Searches for the first occurrence of a bottle in the slab
@@ -96,53 +86,4 @@ public class Slab {
         }
     }
 
-    public void setClickListener() {
-
-        // remove and add buttons of the list
-        final ImageButton[] removeButtons = new ImageButton[typesOfDrinks.length];
-        final ImageButton[] addButtons = new ImageButton[typesOfDrinks.length];
-        final TextView[] amountOfTypeInSlab = new TextView[typesOfDrinks.length];
-
-        for (int i = 0; i < 4; i++) {
-            int removeID = activity.getResources().getIdentifier(typesOfDrinks[i] + "Remove", "id", BuildConfig.APPLICATION_ID);
-            int addID = activity.getResources().getIdentifier(typesOfDrinks[i] + "Add", "id", BuildConfig.APPLICATION_ID);
-            int amountID = activity.getResources().getIdentifier(typesOfDrinks[i] + "Amount", "id", BuildConfig.APPLICATION_ID);
-
-            // remove buttons
-            removeButtons[i] = (ImageButton) activity.findViewById(removeID);
-            addButtons[i] = (ImageButton) activity.findViewById(addID);
-            amountOfTypeInSlab[i] = (TextView) activity.findViewById(amountID);
-        }
-
-        for (int i = 0; i < removeButtons.length; i++) {
-            final int fI = i;
-
-            removeButtons[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if(removeFromSlab(activity, typesOfDrinks[fI])) {
-                        // Decreases the amount counter of the types of bottles in the list below the slab
-                        amountOfTypeInSlab[fI].setText(String.valueOf(Integer.parseInt(amountOfTypeInSlab[fI].getText().toString()) - 1));
-
-                        // Increases the displayed amount of left free slots in the slab
-                        amountInSlab.setText(String.valueOf(Integer.parseInt(amountInSlab.getText().toString()) + 1));
-                    }
-                }
-            });
-
-            addButtons[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    if (addToSlab(typesOfDrinks[fI], fI)) {
-                        // Increases the amount counter of the types of bottles in the list below the slab
-                        amountOfTypeInSlab[fI].setText(String.valueOf(Integer.parseInt(amountOfTypeInSlab[fI].getText().toString()) + 1));
-
-                        // Decreases the displayed amount of left free slots in the slab
-                        amountInSlab.setText(String.valueOf(Integer.parseInt(amountInSlab.getText().toString()) - 1));
-                    }
-                }
-            });
-        }
-
-    }
 }

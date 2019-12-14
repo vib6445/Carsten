@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="230dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="2dp"
+            android:scaleX="0.8"
+            android:scaleY="0.8"
+            app:cardBackgroundColor="#1c1c1c"
+            app:cardCornerRadius="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="300dp"
+                android:layout_height="225dp"
+                android:background="@drawable/slab_vertical_background"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="300dp"
+                    android:layout_height="225dp"
+                    android:paddingHorizontal="56dp"
+                    android:paddingVertical="44dp"
+                    android:scaleX="1.5"
+                    android:scaleY="1.5">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton5"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton7"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton8"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton9"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton10"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton11"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton12"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton13"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton15"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1">
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton17"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton19"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+
+                        <ImageButton
+                            android:id="@+id/shortbeerButton20"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@null"
+                            android:src="@drawable/drink_slot_empty" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

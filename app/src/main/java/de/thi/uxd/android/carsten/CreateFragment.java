@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,22 +27,31 @@ public class CreateFragment extends Fragment {
     private RadioButton[] radioButtons = new RadioButton[4];
     public ViewPager viewPagerObject;
 
+    private Fragment OurSelectionFragment   = new OurSelectionFragment();
+    private Fragment LemonadeFragment       = new LemonadeFragment();
+    private Fragment ShortBeerFragment      = new ShortBeerFragment();
+    private Fragment LongBeerFragment       = new LongBeerFragment();
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         return inflater.inflate((R.layout.fragment_create), container, false);
     }
 
-    @Override
-    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
 
+    @Override
+    public void onResume() {
+        super.onResume();
 
         // Finds the ViewPager object from the fragment_create.xml file and assigns a PagerAdapter
         // The instructions must be in the onViewCreated-Method, because the ViewPager-Object can first be accessed when created
         viewPagerObject = (ViewPager) getActivity().findViewById(R.id.viewPager);
+        viewPagerObject.setOffscreenPageLimit(3);
+
+
         PagerAdapter pagerAdapter = new FixedTabsPagerAdapter(getFragmentManager());
         viewPagerObject.setAdapter(pagerAdapter);
+
 
         viewPagerObject.setCurrentItem(0);
 
@@ -49,6 +59,7 @@ public class CreateFragment extends Fragment {
         setToggleListener();
         viewPagerObject.addOnPageChangeListener(listener);
 
+        Toast.makeText(getContext(), "On Resume CF", Toast.LENGTH_LONG).show();
     }
 
     private void setToggleListener() {
@@ -116,14 +127,14 @@ public class CreateFragment extends Fragment {
         public Fragment getItem(int position) {
             switch (position) {
                 case 0:
-                    return new OurSelectionFragment();
+                    return OurSelectionFragment;
                 case 1:
 
-                    return new LemonadeFragment();
+                    return LemonadeFragment;
                 case 2:
-                    return new ShortBeerFragment();
+                    return ShortBeerFragment;
                 case 3:
-                    return new LongBeerFragment();
+                    return LongBeerFragment;
                 default:
                     return null;
             }
