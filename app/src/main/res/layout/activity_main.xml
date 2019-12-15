@@ -55,7 +55,7 @@
         <androidx.cardview.widget.CardView
             android:layout_width="20dp"
             android:layout_height="20dp"
-            app:cardBackgroundColor="#FFA36A"
+            app:cardBackgroundColor="@color/colorAccent"
             app:cardCornerRadius="100dp"
             app:layout_constraintBottom_toBottomOf="@+id/cardView"
             app:layout_constraintEnd_toEndOf="parent"
