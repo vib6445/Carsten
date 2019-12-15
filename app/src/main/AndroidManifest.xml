@@ -37,7 +37,8 @@
 
         <activity
             android:name=".DeliveryActivity"
-            android:label="@string/title_activity_delivery"></activity>
+            android:label="@string/title_activity_delivery"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
         <activity
             android:name=".LoginActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
