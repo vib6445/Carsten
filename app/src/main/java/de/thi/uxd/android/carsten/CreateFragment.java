@@ -101,6 +101,8 @@ public class CreateFragment extends Fragment {
     }
     private void setCardViewState() {
 
+
+
         final int noDropShadow = 0;
         final int createDropShadow = 16;
 

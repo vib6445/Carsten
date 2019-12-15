@@ -1,16 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent"
-    android:background="@color/colorWhite" >
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:srcCompat="@drawable/background_homescreen" />
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginRight="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="50dp">
+        android:paddingHorizontal="16dp"
+        android:paddingTop="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/imageView2"
@@ -24,12 +39,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="24dp"
             android:layout_marginTop="24dp"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:visibility="invisible">
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:backgroundTintMode="add"
                 android:fontFamily="@font/greycliffcf_extrabold"
                 android:text="Welcome, "
                 android:textColor="#000"
@@ -58,98 +75,178 @@
         </LinearLayout>
 
         <GridLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_width="380dp"
+            android:layout_height="380dp"
             android:layout_marginTop="20dp"
             android:alignmentMode="alignMargins"
             android:columnCount="2"
             android:columnOrderPreserved="false"
             android:rowCount="2">
 
-            <Button
+            <androidx.cardview.widget.CardView
                 android:id="@+id/btn_newOrder"
                 android:layout_width="@dimen/box_size"
                 android:layout_height="@dimen/box_size"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_marginBottom="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:text="New Order"
-                android:fontFamily="@font/greycliffcf_bold"
-                android:textAllCaps="false"
-                android:textSize="17sp"
-                android:gravity="top"
-                android:textStyle="bold"
-                android:background="@drawable/rounded_button"
-                android:textColor="@color/colorWhite"
-                android:drawableBottom="@drawable/ic_orderlogo_white"/>
+                android:layout_columnWeight="1"
+                android:layout_margin="16dp"
+                android:elevation="8dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="20dp">
 
-            <Button
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/greycliffcf_heavy"
+                        android:gravity="top"
+                        android:text="New Order"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_orderlogo_white"
+                        android:backgroundTint="@color/colorBlack"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/btn_deliveryStatus"
                 android:layout_width="@dimen/box_size"
                 android:layout_height="@dimen/box_size"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_marginBottom="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:text="Delivery\nStatus"
-                android:fontFamily="@font/greycliffcf_bold"
-                android:textAllCaps="false"
-                android:textSize="17sp"
-                android:gravity="top"
-                android:textStyle="bold"
-                android:background="@drawable/rounded_button"
-                android:textColor="@color/colorWhite"
-                android:drawableBottom="@drawable/ic_deliverylogo_white"/>
+                android:layout_columnWeight="1"
+                android:layout_margin="16dp"
+                android:elevation="8dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="20dp">
 
-            <Button
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:orientation="vertical"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/greycliffcf_heavy"
+                            android:gravity="top"
+                            android:text="Delivery"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/greycliffcf_heavy"
+                            android:gravity="top"
+                            android:text="Status"
+                            android:textAllCaps="false"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_deliverylogo_white"
+                        android:backgroundTint="@color/colorBlack"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
                 android:id="@+id/btn_profile"
                 android:layout_width="@dimen/box_size"
                 android:layout_height="@dimen/box_size"
-                android:layout_columnWeight="1"
                 android:layout_rowWeight="1"
-                android:layout_marginBottom="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:text="Profile"
-                android:fontFamily="@font/greycliffcf_bold"
-                android:textAllCaps="false"
-                android:textSize="17sp"
-                android:gravity="top"
-                android:textStyle="bold"
-                android:background="@drawable/rounded_button"
-                android:textColor="@color/colorWhite"
-                android:drawableBottom="@drawable/ic_profilelogo_white"/>
+                android:layout_columnWeight="1"
+                android:layout_margin="16dp"
+                android:elevation="8dp"
+                app:cardBackgroundColor="@color/colorWhite"
+                app:cardCornerRadius="20dp">
 
-            <Button
-                android:id="@+id/btn_tbd"
-                android:layout_width="@dimen/box_size"
-                android:layout_height="@dimen/box_size"
-                android:layout_columnWeight="1"
-                android:layout_rowWeight="1"
-                android:layout_marginBottom="25dp"
-                android:layout_marginTop="25dp"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:text="TBD"
-                android:fontFamily="@font/greycliffcf_bold"
-                android:textAllCaps="false"
-                android:textSize="17sp"
-                android:gravity="top"
-                android:textStyle="bold"
-                android:background="@drawable/rounded_button"
-                android:textColor="@color/colorWhite"/>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:fontFamily="@font/greycliffcf_heavy"
+                        android:gravity="top"
+                        android:text="Profile"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:adjustViewBounds="false"
+                        android:background="@drawable/ic_profilelogo_white"
+                        android:backgroundTint="@color/colorBlack"
+                        android:cropToPadding="false"
+                        android:scaleType="centerInside"
+                        android:scaleX="0.8"
+                        android:scaleY="0.8"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </GridLayout>
-
 
 
     </LinearLayout>
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
