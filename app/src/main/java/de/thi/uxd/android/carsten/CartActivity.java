@@ -3,6 +3,7 @@ package de.thi.uxd.android.carsten;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -26,6 +27,10 @@ public class CartActivity extends AppCompatActivity {
         CartContainer cartContainer = (CartContainer) intent.getSerializableExtra("CartContainer");
 
         ArrayList<Slab> slabList = cartContainer.getSlabList();
+        /* for (int i = 0; i < slabList.size(); i++) {
+            String out = slabList.get(i).getSlabBottles()[i].getBottleType();
+            Toast.makeText(getApplicationContext(), out, Toast.LENGTH_SHORT).show();
+        } */
 
         LinearLayout cartRootLayout = findViewById(R.id.cartRootLayout);
 
@@ -39,21 +44,23 @@ public class CartActivity extends AppCompatActivity {
             } else {
                 layout = R.layout.slab_shortbeer;
             }
-
             View slabView = getLayoutInflater().inflate(layout, null);
 
 
-
-
-
-            int[] resIDs = new int[slabList.get(i).getSlabBottles().length];
-            ImageButton[] imageButtons = new ImageButton[slabList.get(i).getSlabBottles().length];
-
-            for (int id = 0; id < resIDs.length; id++) {
-                resIDs[id] = getResources().getIdentifier(slabList.get(i).getType() + "Button" + (id + 1), "id", BuildConfig.APPLICATION_ID);
-                imageButtons[id] = slabView.findViewById(resIDs[id]);
-                imageButtons[id].setImageResource(slabList.get(i).getSlabBottles()[id].getDrawableID());
+            ArrayList<View> allViewsWithinMySlabView = getAllChildren(slabView);
+            int id = 0;
+            for (View child : allViewsWithinMySlabView) {
+                if (child instanceof ImageButton) {
+                    ImageButton childButton = (ImageButton) child;
+                    if (id < 12) {
+                        childButton.setImageResource(slabList.get(i).getSlabBottles()[id].getDrawableID());
+                    } else {
+                        childButton.setImageResource(R.drawable.drink_slot_empty);
+                    }
+                    id++;
+                }
             }
+
 
             slabSpace.addView(slabView);
             cartRootLayout.addView(cardView);
@@ -71,6 +78,29 @@ public class CartActivity extends AppCompatActivity {
     }
 
 
+    private ArrayList<View> getAllChildren(View v) {
+
+        if (!(v instanceof ViewGroup)) {
+            ArrayList<View> viewArrayList = new ArrayList<View>();
+            viewArrayList.add(v);
+            return viewArrayList;
+        }
+
+        ArrayList<View> result = new ArrayList<View>();
+
+        ViewGroup vg = (ViewGroup) v;
+        for (int i = 0; i < vg.getChildCount(); i++) {
+
+            View child = vg.getChildAt(i);
+
+            ArrayList<View> viewArrayList = new ArrayList<View>();
+            viewArrayList.add(v);
+            viewArrayList.addAll(getAllChildren(child));
+
+            result.addAll(viewArrayList);
+        }
+        return result;
+    }
 
     public void openCheckoutActivity(){
         Intent intent = new Intent(this, CheckoutActivity.class);

@@ -32,7 +32,7 @@ public class LemonadeFragment extends Fragment {
 
     // Lemonade Slab with a fixed amount of bottles
     private Slab lemonade;
-    private int[] resIDs = new int[12];
+    private ImageButton[] imageButtons = new ImageButton[12];
 
     private TextView amountInSlab;
 
@@ -50,10 +50,12 @@ public class LemonadeFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_lemonade, container, false);
 
+
         LinearLayout slabRootLayout = rootView.findViewById(R.id.slabRootLayout);
 
         View slabView = inflater.inflate(R.layout.slab_lemonade, null);
         slabRootLayout.addView(slabView);
+
         // Inflate the layout for this fragment
         return rootView;
     }
@@ -61,9 +63,16 @@ public class LemonadeFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        lemonade = new Slab(getContext(), getActivity(), resIDs, drawables, typesOfDrinks, "lemonade");
+
+        for (int i = 0; i < imageButtons.length; i++) {
+            int id = i + 1;
+            imageButtons[i] = getActivity().findViewById(getActivity().getResources().getIdentifier("lemonadeButton" + id, "id", BuildConfig.APPLICATION_ID));
+        }
+
+
+        lemonade = new Slab(drawables, "lemonade");
         amountInSlab = (TextView) getActivity().findViewById(R.id.amountLemonade);
-        amountInSlab.setText(String.valueOf(resIDs.length));
+        amountInSlab.setText(String.valueOf(12));
         setClickListener();
         addToCartListener();
     }
@@ -74,7 +83,7 @@ public class LemonadeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 if (lemonade.isFull()) {
-                    CartContainer.addToCart(lemonade);
+                    CartContainer.addToCart(new Slab(lemonade));
 
                     ImageButton cartButton = getActivity().findViewById(R.id.cartButton);
                     cartButton.setColorFilter(R.color.colorBlack);
@@ -92,7 +101,7 @@ public class LemonadeFragment extends Fragment {
 
     private void setClickListener() {
 
-        for (int i = 0; i < 4; i++) {
+        for (int i = 0; i < removeButtons.length; i++) {
             int removeID = getActivity().getResources().getIdentifier(typesOfDrinks[i] + "Remove", "id", BuildConfig.APPLICATION_ID);
             int addID = getActivity().getResources().getIdentifier(typesOfDrinks[i] + "Add", "id", BuildConfig.APPLICATION_ID);
             int amountID = getActivity().getResources().getIdentifier(typesOfDrinks[i] + "Amount", "id", BuildConfig.APPLICATION_ID);
@@ -115,6 +124,10 @@ public class LemonadeFragment extends Fragment {
 
                         // Increases the displayed amount of left free slots in the slab
                         amountInSlab.setText(String.valueOf(Integer.parseInt(amountInSlab.getText().toString()) + 1));
+
+                        for (int i = 0; i < imageButtons.length; i++) {
+                            imageButtons[i].setImageResource(lemonade.getSlabBottles()[i].getDrawableID());
+                        }
                     }
                 }
             });
@@ -128,10 +141,16 @@ public class LemonadeFragment extends Fragment {
 
                         // Increases the displayed amount of left free slots in the slab
                         amountInSlab.setText(String.valueOf(Integer.parseInt(amountInSlab.getText().toString()) - 1));
+
+                        for (int i = 0; i < imageButtons.length; i++) {
+                            imageButtons[i].setImageResource(lemonade.getSlabBottles()[i].getDrawableID());
+                        }
                     }
                 }
             });
         }
+
+
 
     }
 }

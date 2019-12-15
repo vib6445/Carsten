@@ -8,11 +8,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-import de.thi.uxd.android.carsten.BuildConfig;
 import de.thi.uxd.android.carsten.R;
 
 /**
@@ -53,7 +50,7 @@ public class ShortBeerFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_short_beer, container, false);
     }
 
-
+    /*
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -107,5 +104,5 @@ public class ShortBeerFragment extends Fragment {
         }
 
     }
-
+    */
 }
