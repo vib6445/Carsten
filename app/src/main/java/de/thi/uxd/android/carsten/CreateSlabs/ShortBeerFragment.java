@@ -21,12 +21,13 @@ import de.thi.uxd.android.carsten.R;
 public class ShortBeerFragment extends Fragment {
 
     // possible types of drinks/ bottles with their correct drawables
-    private final String[] typesOfDrinks = {"ag", "ae", "tg", "gw"};
+    private final String[] typesOfDrinks = {"ag", "ae", "tg", "sh","gw"};
     private final int[] drawables = {
-            R.drawable.ic_coke,
-            R.drawable.ic_sprite,
-            R.drawable.ic_mmix,
-            R.drawable.ic_fanta,
+            R.drawable.ic_augustiner_hell,
+            R.drawable.ic_augustiner_edelstoff,
+            R.drawable.ic_tegernseer_hell,
+            R.drawable.ic_spaten_hell,
+            R.drawable.ic_gutmann_weizen
     };
 
     // Beer (Short Bottles) Slab with a fixed amount of bottles

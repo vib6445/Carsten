@@ -20,14 +20,15 @@ public class LongBeerFragment extends Fragment {
 
 
     // possible types of drinks/ bottles with their correct drawables
-    private final String[] typesOfDrinks = {"ph", "pw", "pf", "lh", "gh", "gr"};
+    private final String[] typesOfDrinks = {"ph", "pw", "pr", "pf", "lh", "gh", "gr"};
     private final int[] drawables = {
-            R.drawable.ic_coke,
-            R.drawable.ic_sprite,
-            R.drawable.ic_mmix,
-            R.drawable.ic_fanta,
-            R.drawable.ic_fanta,
-            R.drawable.ic_fanta
+            R.drawable.ic_paulaner_hell,
+            R.drawable.ic_paulaner_weizen,
+            R.drawable.ic_paulaner_radler,
+            R.drawable.ic_paulaner_alkoholfrei,
+            R.drawable.ic_loewen_hell,
+            R.drawable.ic_goesser_hell,
+            R.drawable.ic_goesser_radler
     };
 
     // Beer (Long Bottles) Slab with a fixed amount of bottles

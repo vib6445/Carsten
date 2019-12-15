@@ -6,9 +6,11 @@ import android.content.Context;
 import de.thi.uxd.android.carsten.BuildConfig;
 
 
-class Slab {
+public class Slab {
 
     private Activity activity;
+
+    private String slabType;
 
     private SlabBottle[] slabBottles;
     private int[] drawables;
@@ -16,9 +18,10 @@ class Slab {
 
 
 
-    Slab(Context context, Activity _activity, int[] resIDs, int[] fragmentDrawables, String[] _typesOfDrinks, String slabType) {
+    Slab(Context context, Activity activity, int[] resIDs, int[] fragmentDrawables, String[] _typesOfDrinks, String slabType) {
 
-        this.activity = _activity;
+        this.activity = activity;
+        this.slabType = slabType;
 
         // Creates the array of empty SlabBottles with the slab specific amount of slots
         slabBottles = new SlabBottle[resIDs.length];
@@ -29,6 +32,8 @@ class Slab {
             resIDs[i] = activity.getResources().getIdentifier(slabType + "Button" + id, "id", BuildConfig.APPLICATION_ID);
         }
         drawables = fragmentDrawables;
+
+
 
         fillSlabWithEmptyBottles(context, resIDs);
     }
@@ -84,6 +89,22 @@ class Slab {
                 slabBottles[i].setEmpty();
             }
         }
+    }
+
+    public boolean isFull() {
+        for (SlabBottle slabBottle : slabBottles) {
+            if (slabBottle.isEmpty()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public String getType() {
+        return slabType;
+    }
+    public SlabBottle[] getSlabBottles() {
+        return slabBottles;
     }
 
 }
