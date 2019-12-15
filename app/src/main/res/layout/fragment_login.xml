@@ -3,69 +3,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".LoginFragment">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/app_name"
-        android:textSize="50sp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="10dp"
-        android:layout_above="@id/tv_subtitle"/>
-
-    <TextView
-        android:id="@+id/tv_subtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/tag"
-        android:textSize="17sp"
-        android:layout_marginStart="25dp"
-        android:layout_marginBottom="50dp"
-        android:layout_above="@id/et_email"/>
-
-    <EditText
-        android:id="@+id/et_email"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="@string/e_mail"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:padding="15dp"
-        android:inputType="textEmailAddress"
-        android:layout_above="@id/et_password"
-        android:textSize="15sp" />
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="50dp">
 
-    <EditText
-        android:id="@+id/et_password"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="@string/password"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="10dp"
-        android:padding="15dp"
-        android:inputType="textPassword"
-        android:layout_centerInParent="true"
-        android:textSize="15sp" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="70dp"
+            android:paddingLeft="20dp"
+            app:srcCompat="@drawable/ic_carsten_logo_text" />
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/et_password"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="15dp"
-        android:textColor="@android:color/white"
-        android:text="@string/login"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
 
-    <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_above="@id/swipeRight"
-        android:layout_centerHorizontal="true"/>
+            android:text="E-Mail"
+            android:textSize="20sp"
+            android:fontFamily="@font/greycliffcf_bold"
+            android:textColor="@color/colorBlack"/>
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:padding="15dp"
+            android:inputType="textEmailAddress"
+            android:layout_above="@id/et_password"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="40dp"
+            android:text="Password"
+            android:textSize="20sp"
+            android:fontFamily="@font/greycliffcf_bold"
+            android:textColor="@color/colorBlack"/>
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:inputType="textPassword"
+            android:layout_centerInParent="true"
+            android:textSize="15sp" />
+
+
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/buy_button_background"
+            android:text="Login"
+            android:textAllCaps="false"
+            android:fontFamily="@font/greycliffcf_bold"
+            android:textColor="@color/colorWhite" />
+
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/swipeRight"
@@ -73,8 +90,10 @@
         android:layout_height="wrap_content"
         android:text="@string/swipe_left_for_register"
         android:textSize="15sp"
+        android:fontFamily="@font/greycliffcf_regular"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="20dp"/>
+
 
 </RelativeLayout>
