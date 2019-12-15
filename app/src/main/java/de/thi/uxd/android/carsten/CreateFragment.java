@@ -6,7 +6,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -23,9 +22,9 @@ import de.thi.uxd.android.carsten.CreateSlabs.OurSelectionFragment;
 import de.thi.uxd.android.carsten.CreateSlabs.ShortBeerFragment;
 
 public class CreateFragment extends Fragment {
-    final static int[] radioIDs = {R.id.radioButton1, R.id.radioButton2, R.id.radioButton3, R.id.radioButton4};
+    private final static int[] radioIDs = {R.id.radioButton1, R.id.radioButton2, R.id.radioButton3, R.id.radioButton4};
     private RadioButton[] radioButtons = new RadioButton[4];
-    public ViewPager viewPagerObject;
+    private ViewPager viewPagerObject;
 
     private Fragment OurSelectionFragment   = new OurSelectionFragment();
     private Fragment LemonadeFragment       = new LemonadeFragment();
@@ -40,26 +39,27 @@ public class CreateFragment extends Fragment {
 
 
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
 
         // Finds the ViewPager object from the fragment_create.xml file and assigns a PagerAdapter
         // The instructions must be in the onViewCreated-Method, because the ViewPager-Object can first be accessed when created
         viewPagerObject = (ViewPager) getActivity().findViewById(R.id.viewPager);
+
+        // Keeps all fragments in cache for improved usability
         viewPagerObject.setOffscreenPageLimit(3);
 
 
-        PagerAdapter pagerAdapter = new FixedTabsPagerAdapter(getFragmentManager());
+        PagerAdapter pagerAdapter = new FixedTabsPagerAdapter(getChildFragmentManager());
         viewPagerObject.setAdapter(pagerAdapter);
 
-
+        // Our selection is the first active item when going to the Slab-Creation
         viewPagerObject.setCurrentItem(0);
 
         // Use the ToggleButtons to change the shown fragment of the ViewPagers and set the drop shadow below the card view to highlight the activated state of the related ToggleButton
         setToggleListener();
         viewPagerObject.addOnPageChangeListener(listener);
 
-        Toast.makeText(getContext(), "On Resume CF", Toast.LENGTH_LONG).show();
     }
 
     private void setToggleListener() {
