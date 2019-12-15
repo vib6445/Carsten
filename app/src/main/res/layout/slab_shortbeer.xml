@@ -25,14 +25,14 @@
             <LinearLayout
                 android:layout_width="300dp"
                 android:layout_height="225dp"
-                android:background="@drawable/slab_vertical_background"
+                android:background="@drawable/slab_beer"
                 android:orientation="vertical">
 
                 <TableLayout
                     android:layout_width="300dp"
                     android:layout_height="225dp"
                     android:paddingHorizontal="56dp"
-                    android:paddingVertical="44dp"
+                    android:paddingVertical="42dp"
                     android:scaleX="1.5"
                     android:scaleY="1.5">
 

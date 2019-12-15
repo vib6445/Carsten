@@ -59,7 +59,7 @@
                     android:layout_height="225dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
-                    android:background="@drawable/slab_vertical_background"
+                    android:background="@drawable/slab_lemonade"
                     android:orientation="vertical">
 
                     <TableLayout
