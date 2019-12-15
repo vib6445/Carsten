@@ -9,10 +9,9 @@
          location permissions for the 'MyLocation' functionality.
     -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
 
-    <meta-data
-        android:name="com.google.android.geo.API_KEY"
-        android:value="AIzaSyAkb3-kJwj4HGjPxU4orR143jqkBj4762A" />
+
 
     <application
         android:allowBackup="true"
@@ -38,7 +37,7 @@
         <activity
             android:name=".DeliveryActivity"
             android:label="@string/title_activity_delivery"
-            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"></activity>
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
         <activity
             android:name=".LoginActivity"
             android:theme="@style/Theme.AppCompat.DayNight.NoActionBar">
