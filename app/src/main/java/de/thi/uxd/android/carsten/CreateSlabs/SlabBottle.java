@@ -28,9 +28,9 @@ public class SlabBottle {
     }
 
 
-    public void setBottleType(String strBottleType, int _drawableID) {
-        this.bottleType = strBottleType;
-        this.drawableID = _drawableID;
+    public void setBottleType(String bottleType, int drawableID) {
+        this.bottleType = bottleType;
+        this.drawableID = drawableID;
     }
 
 

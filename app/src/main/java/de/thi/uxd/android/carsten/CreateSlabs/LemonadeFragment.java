@@ -32,13 +32,18 @@ public class LemonadeFragment extends Fragment {
 
     // Lemonade Slab with a fixed amount of bottles
     private Slab lemonade;
+
+    // ImageButton Array for visual feedback of filled slab slots
     private ImageButton[] imageButtons = new ImageButton[12];
 
+    // TextView showing the free space of the slab (Lemonade = 12)
     private TextView amountInSlab;
 
-    // remove and add buttons of the list
+    // Remove and add buttons of the list
     private ImageButton[] removeButtons = new ImageButton[typesOfDrinks.length];
     private ImageButton[] addButtons = new ImageButton[typesOfDrinks.length];
+
+    // TextView showing the current amount of a bottle type in the slab
     private TextView[] amountOfTypeInSlab = new TextView[typesOfDrinks.length];
 
     public LemonadeFragment() {
@@ -46,13 +51,12 @@ public class LemonadeFragment extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+
         View rootView = inflater.inflate(R.layout.fragment_lemonade, container, false);
 
-
-        LinearLayout slabRootLayout = rootView.findViewById(R.id.slabRootLayout);
-
+        // Load slab dynamically, because the slab view is later needed for the cart
+        LinearLayout slabRootLayout = rootView.findViewById(R.id.slabLemonadeSpace);
         View slabView = inflater.inflate(R.layout.slab_lemonade, null);
         slabRootLayout.addView(slabView);
 
@@ -64,30 +68,40 @@ public class LemonadeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // Fills the ImageButton Array with their corresponding Views from the XML-file
+        // The IDs of the ImageButtons in the XML-file follows a specific naming guideline: type + "Button" + count.
         for (int i = 0; i < imageButtons.length; i++) {
+            // The counter start with 1 in the XML-file
             int id = i + 1;
             imageButtons[i] = getActivity().findViewById(getActivity().getResources().getIdentifier("lemonadeButton" + id, "id", BuildConfig.APPLICATION_ID));
         }
 
+        // Creates new Slab that resembles the graphical ImageButtons with the actual information as object
+        lemonade = new Slab(drawables, "lemonade", imageButtons.length);
 
-        lemonade = new Slab(drawables, "lemonade");
+        // Sets the initial amount of free slots in the slab
         amountInSlab = (TextView) getActivity().findViewById(R.id.amountLemonade);
-        amountInSlab.setText(String.valueOf(12));
+        amountInSlab.setText(String.valueOf(imageButtons.length));
+
+        // Sets the click listener for the add and remove buttons
         setClickListener();
+
+        // Sets the click listener to the bottom button, with which you can add a filled Slab to the cart
         addToCartListener();
     }
 
     private void addToCartListener() {
-        Button aTCButton = (Button) getActivity().findViewById(R.id.addToCart);
+        Button aTCButton = (Button) getActivity().findViewById(R.id.addToCartL);
         aTCButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (lemonade.isFull()) {
+                    // Uses the Copy-Constructor to create a new instance of the slab, which is then added to an ArrayList holding various Slabs
                     CartContainer.addToCart(new Slab(lemonade));
 
+                    // As soon as a slab is added to the cart the icon indicates with the color and a badge that now a buy operation can be conducted
                     ImageButton cartButton = getActivity().findViewById(R.id.cartButton);
                     cartButton.setColorFilter(R.color.colorBlack);
-
                     TextView amountInCart = getActivity().findViewById(R.id.amountInCart);
                     amountInCart.setText(String.valueOf(Integer.parseInt(amountInCart.getText().toString()) + 1));
                 }
@@ -149,8 +163,5 @@ public class LemonadeFragment extends Fragment {
                 }
             });
         }
-
-
-
     }
 }

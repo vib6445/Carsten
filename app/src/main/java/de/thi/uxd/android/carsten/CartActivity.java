@@ -52,11 +52,7 @@ public class CartActivity extends AppCompatActivity {
             for (View child : allViewsWithinMySlabView) {
                 if (child instanceof ImageButton) {
                     ImageButton childButton = (ImageButton) child;
-                    if (id < 12) {
-                        childButton.setImageResource(slabList.get(i).getSlabBottles()[id].getDrawableID());
-                    } else {
-                        childButton.setImageResource(R.drawable.drink_slot_empty);
-                    }
+                    childButton.setImageResource(slabList.get(i).getSlabBottles()[id].getDrawableID());
                     id++;
                 }
             }

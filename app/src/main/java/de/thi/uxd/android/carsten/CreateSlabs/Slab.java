@@ -10,11 +10,11 @@ public class Slab {
 
 
 
-    Slab(int[] fragmentDrawables, String slabType) {
+    Slab(int[] fragmentDrawables, String slabType, int size) {
         this.slabType = slabType;
 
         // Creates the array of empty SlabBottles with the slab specific amount of slots
-        slabBottles = new SlabBottle[12];
+        slabBottles = new SlabBottle[size];
 
 
         drawables = fragmentDrawables;
