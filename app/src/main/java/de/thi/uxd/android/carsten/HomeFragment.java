@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentTransaction;
 public class HomeFragment extends Fragment {
 
     Button buttonDelivery;
+    Button buttonProfile;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -30,6 +31,21 @@ public class HomeFragment extends Fragment {
                 transaction.commit();
             }
         });
+
+        buttonProfile = v.findViewById(R.id.btn_profile);
+
+        buttonProfile.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                ProfileFragment profileFragment = new ProfileFragment();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.fragment_container, profileFragment);
+                transaction.commit();
+            }
+        });
         return v;
+
+
     }
 }

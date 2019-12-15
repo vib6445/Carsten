@@ -332,7 +332,8 @@
                         android:text="Remove"
                         android:textAllCaps="false"
                         android:textColor="@color/deleteRed"
-                        android:textSize="15sp" />
+                        android:textSize="15sp"
+                        android:stateListAnimator="@null"/>
 
 
                 </LinearLayout>
