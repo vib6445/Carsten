@@ -355,6 +355,111 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/shLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/shImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_icon_spaten_hell_list"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="80dp"
+                tools:layout_conversion_absoluteWidth="104dp" />
+
+
+            <TextView
+                android:id="@+id/shTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/greycliffcf_heavy"
+                android:text="Spaten Helles"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/shType"
+                app:layout_constraintStart_toEndOf="@+id/shImage"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_conversion_absoluteWidth="59dp" />
+
+            <TextView
+                android:id="@+id/shType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1.0 liter PET"
+                android:textColor="@color/colorGrey"
+                android:fontFamily="@font/greycliffcf_regular"
+                app:layout_constraintStart_toStartOf="@+id/shTitle"
+                app:layout_constraintTop_toBottomOf="@+id/shTitle"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_conversion_absoluteWidth="82dp"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:id="@+id/shPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/greycliffcf_regular"
+                android:text="1.90 $"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/shImage"
+                app:layout_constraintStart_toEndOf="@+id/shImage"
+                app:layout_constraintTop_toBottomOf="@+id/shType"
+                tools:layout_conversion_absoluteHeight="27dp"
+                tools:layout_conversion_absoluteWidth="82dp"/>
+
+
+            <ImageButton
+                android:id="@+id/shRemove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="64dp"
+                android:background="@null"
+                android:src="@drawable/ic_button_minus_disabled"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/shAdd"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="35dp"
+                tools:layout_conversion_absoluteWidth="63dp" />
+
+            <TextView
+                android:id="@+id/shAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/greycliffcf_medium"
+                android:gravity="center_horizontal"
+                android:text="0"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/shAdd"
+                app:layout_constraintStart_toEndOf="@+id/shRemove"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="19dp"
+                tools:layout_conversion_absoluteWidth="83dp" />
+
+            <ImageButton
+                android:id="@+id/shAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/ic_button_plus"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_conversion_absoluteHeight="51dp"
+                tools:layout_conversion_absoluteWidth="80dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/gwLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -368,7 +473,7 @@
                 android:id="@+id/gwImage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/ic_icon_spaten_hell_list"
+                android:src="@drawable/ic_icon_gutmann_weizen_list"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:layout_conversion_absoluteHeight="80dp"
