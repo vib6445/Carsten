@@ -20,4 +20,5 @@
     <string name="lemonade">Lemonade</string>
     <string name="beer_long">Beer (Long)</string>
     <string name="beer_short">Beer (Short)</string>
+    <string name="title_activity_delivery">Map</string>
 </resources>
