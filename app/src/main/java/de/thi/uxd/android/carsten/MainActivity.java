@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
@@ -14,7 +13,10 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
+
 public class MainActivity extends AppCompatActivity {
+
+    private static final CreateFragment createFragment = new CreateFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = new ProfileFragment();
                         break;
                     case R.id.nav_create:
-                        selectedFragment = new CreateFragment();
+                        selectedFragment = createFragment;
                         break;
                 }
 
