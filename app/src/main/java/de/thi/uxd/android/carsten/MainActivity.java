@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,15 +14,22 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
-
 public class MainActivity extends AppCompatActivity {
+
+    CartContainer cartContainer = new CartContainer();
+    ImageButton cartButton;
+
+    public MainActivity() {
+
+
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton cartButton = findViewById(R.id.cartButton);
+        cartButton = findViewById(R.id.cartButton);
         cartButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,9 +43,16 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
     }
 
+
     public void openCartActivity(){
-        Intent intent = new Intent(this, CartActivity.class);
-        startActivity(intent);
+        if (cartContainer.getSlabList().isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Your current Cart is empty. Start with creating new Slabs.", Toast.LENGTH_LONG).show();
+        } else {
+            Intent intent = new Intent(this, CartActivity.class);
+            intent.putExtra("CartContainer", cartContainer);
+            startActivity(intent);
+        }
+
     }
 
 

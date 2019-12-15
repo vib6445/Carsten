@@ -31,21 +31,48 @@
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
 
-        <ImageButton
-            android:id="@+id/cartButton"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:background="#ffffff"
-            android:clickable="true"
-            android:foregroundTint="@color/colorBlack"
-            android:tint="@color/colorBlack"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="0dp"
             app:layout_constraintBottom_toBottomOf="@+id/top_navigation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/top_navigation"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/cartButton"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_weight="0"
+                android:background="#ffffff"
+                android:clickable="true"
+                app:srcCompat="@drawable/icon_shopping_cart" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            app:cardBackgroundColor="#FFA36A"
+            app:cardCornerRadius="100dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.24"
+            app:layout_constraintStart_toStartOf="@+id/cardView"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.4"
-            app:srcCompat="@drawable/icon_shopping_cart" />
+            app:layout_constraintVertical_bias="0.32999998">
+
+            <TextView
+                android:id="@+id/amountInCart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite" />
+        </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

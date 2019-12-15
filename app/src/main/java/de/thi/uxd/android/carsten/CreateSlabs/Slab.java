@@ -1,14 +1,8 @@
 package de.thi.uxd.android.carsten.CreateSlabs;
 
-import android.app.Activity;
-import android.content.Context;
+public class Slab {
 
-import de.thi.uxd.android.carsten.BuildConfig;
-
-
-class Slab {
-
-    private Activity activity;
+    private String slabType;
 
     private SlabBottle[] slabBottles;
     private int[] drawables;
@@ -16,28 +10,28 @@ class Slab {
 
 
 
-    Slab(Context context, Activity _activity, int[] resIDs, int[] fragmentDrawables, String[] _typesOfDrinks, String slabType) {
-
-        this.activity = _activity;
+    Slab(int[] fragmentDrawables, String slabType, int size) {
+        this.slabType = slabType;
 
         // Creates the array of empty SlabBottles with the slab specific amount of slots
-        slabBottles = new SlabBottle[resIDs.length];
+        slabBottles = new SlabBottle[size];
 
-        // Receives all ImageButtons from the Fragment within the slab
-        for (int i = 0; i < resIDs.length; i++) {
-            int id = i + 1;
-            resIDs[i] = activity.getResources().getIdentifier(slabType + "Button" + id, "id", BuildConfig.APPLICATION_ID);
-        }
+
         drawables = fragmentDrawables;
 
-        fillSlabWithEmptyBottles(context, resIDs);
-    }
-
-    private void fillSlabWithEmptyBottles(Context context, int[] resIDs) {
         // Fills the array of empty SlabBottles
         for (int i = 0; i < slabBottles.length; i++) {
-            slabBottles[i] = new SlabBottle(context, activity, resIDs[i]);
+            slabBottles[i] = new SlabBottle();
         }
+    }
+
+    Slab(Slab that) {
+        this.slabType = that.slabType;
+        this.slabBottles = new SlabBottle[that.getSlabBottles().length];
+        for (int i = 0; i < slabBottles.length; i++) {
+            slabBottles[i] = new SlabBottle(that.getSlabBottles()[i]);
+        }
+        this.drawables = that.drawables;
     }
 
     // Function returns a boolean so the fragment knows if the amount of bottles in the slab and the list should INCREASE
@@ -84,6 +78,22 @@ class Slab {
                 slabBottles[i].setEmpty();
             }
         }
+    }
+
+    public boolean isFull() {
+        for (SlabBottle slabBottle : slabBottles) {
+            if (slabBottle.isEmpty()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public String getType() {
+        return slabType;
+    }
+    public SlabBottle[] getSlabBottles() {
+        return slabBottles;
     }
 
 }

@@ -15,19 +15,23 @@
         android:paddingTop="10dp">
 
 
-        <include layout="@layout/slab_longbeer" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/slabLongBeerSpace"
+            android:gravity="center"
+            android:orientation="vertical" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-20dp"
             android:layout_marginBottom="20dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal"
             android:paddingLeft="20dp">
 
             <TextView
-                android:id="@+id/numberOfBottles"
+                android:id="@+id/amountLongBeer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/greycliffcf_heavy"
@@ -773,7 +777,7 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/addToCartLB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"

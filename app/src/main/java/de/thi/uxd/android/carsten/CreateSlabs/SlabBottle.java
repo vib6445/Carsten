@@ -1,24 +1,24 @@
 package de.thi.uxd.android.carsten.CreateSlabs;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.content.Context;
-import android.widget.ImageButton;
 
 import de.thi.uxd.android.carsten.R;
 
 @SuppressLint("AppCompatCustomView")
-public class SlabBottle extends ImageButton {
+public class SlabBottle {
     private String bottleType;
-    private ImageButton imageButton;
     private final String empty = "empty";
     private int drawableID = R.drawable.drink_slot_empty;
 
-    public SlabBottle(Context context, Activity activity, int imgBtResId) {
-        super(context);
-        imageButton = (ImageButton) activity.findViewById(imgBtResId);
+    public SlabBottle() {
         setEmpty();
     }
+
+    public SlabBottle(SlabBottle slabBottle) {
+        this.bottleType = slabBottle.bottleType;
+        this.drawableID = slabBottle.drawableID;
+    }
+
 
     public String getBottleType() {
         return bottleType;
@@ -28,16 +28,15 @@ public class SlabBottle extends ImageButton {
     }
 
 
-    public void setBottleType(String strBottleType, int _drawableID) {
-        this.bottleType = strBottleType;
-        this.drawableID = _drawableID;
-        this.imageButton.setImageResource(drawableID);
+    public void setBottleType(String bottleType, int drawableID) {
+        this.bottleType = bottleType;
+        this.drawableID = drawableID;
     }
 
 
     public void setEmpty() {
         bottleType = empty;
-        imageButton.setImageResource(R.drawable.drink_slot_empty);
+        drawableID = R.drawable.drink_slot_empty;
     }
     public boolean isEmpty() {
         return bottleType.equals(empty);

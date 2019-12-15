@@ -31,6 +31,8 @@ public class CreateFragment extends Fragment {
     private Fragment ShortBeerFragment      = new ShortBeerFragment();
     private Fragment LongBeerFragment       = new LongBeerFragment();
 
+
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -111,6 +113,7 @@ public class CreateFragment extends Fragment {
             }
         }
     }
+
 
     // Returns the correct Fragment
     private class FixedTabsPagerAdapter extends FragmentPagerAdapter {
