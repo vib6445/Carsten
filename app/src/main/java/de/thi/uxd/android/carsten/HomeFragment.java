@@ -13,14 +13,9 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import de.thi.uxd.android.carsten.LoginActivity;
-import de.thi.uxd.android.carsten.R;
 
 public class HomeFragment extends Fragment {
 
-    CardView buttonDelivery;
-    CardView buttonProfile;
-    CardView buttonCreate;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -29,8 +24,7 @@ public class HomeFragment extends Fragment {
         final BottomNavigationView topNav = getActivity().findViewById(R.id.top_navigation);
 
 
-
-        buttonDelivery = v.findViewById(R.id.btn_deliveryStatus);
+        CardView buttonDelivery = v.findViewById(R.id.btn_deliveryStatus);
         buttonDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,7 +33,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        buttonCreate = v.findViewById(R.id.btn_newOrder);
+        CardView buttonCreate = v.findViewById(R.id.btn_newOrder);
         buttonCreate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -47,7 +41,7 @@ public class HomeFragment extends Fragment {
             }
         });
 
-        buttonProfile = v.findViewById(R.id.btn_profile);
+        CardView buttonProfile = v.findViewById(R.id.btn_profile);
         buttonProfile.setOnClickListener(new View.OnClickListener(){
 
             @Override
