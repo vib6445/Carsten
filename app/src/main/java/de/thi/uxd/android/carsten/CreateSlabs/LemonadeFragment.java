@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import de.thi.uxd.android.carsten.BuildConfig;
@@ -48,8 +50,8 @@ public class LemonadeFragment extends Fragment {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         lemonade = new Slab(getContext(), getActivity(), resIDs, drawables, typesOfDrinks, "lemonade");
         amountInSlab = (TextView) getActivity().findViewById(R.id.amountLemonade);
         amountInSlab.setText(String.valueOf(resIDs.length));

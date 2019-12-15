@@ -16,8 +16,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static final CreateFragment createFragment = new CreateFragment();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         topNav.setOnNavigationItemSelectedListener(navListener);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
-
     }
 
     public void openCartActivity(){
@@ -49,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 Fragment selectedFragment = null;
-
                 switch (menuItem.getItemId()) {
                     case R.id.nav_home:
                         selectedFragment = new HomeFragment();
@@ -58,11 +54,11 @@ public class MainActivity extends AppCompatActivity {
                         selectedFragment = new ProfileFragment();
                         break;
                     case R.id.nav_create:
-                        selectedFragment = createFragment;
+                        selectedFragment = new CreateFragment();
                         break;
                 }
 
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commit();
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, selectedFragment).commitNow();
                 return true;
             }
         };
