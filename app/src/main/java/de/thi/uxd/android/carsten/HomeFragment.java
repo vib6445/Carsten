@@ -13,6 +13,9 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import de.thi.uxd.android.carsten.LoginActivity;
+import de.thi.uxd.android.carsten.R;
+
 public class HomeFragment extends Fragment {
 
     CardView buttonDelivery;
@@ -31,7 +34,7 @@ public class HomeFragment extends Fragment {
         buttonDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), LoginActivity.class);
+                Intent intent = new Intent(getActivity(), DeliveryActivity.class);
                 startActivity(intent);
             }
         });
