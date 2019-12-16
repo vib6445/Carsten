@@ -9,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import java.util.ArrayList;
 
@@ -33,13 +34,15 @@ public class CartActivity extends AppCompatActivity {
 
 
         Button checkoutButton = findViewById(R.id.checkoutButton);
-        LinearLayout emptyState = findViewById(R.id.emptyState);
+        ConstraintLayout emptyState = findViewById(R.id.emptyState);
         if (slabList.isEmpty()) {
             checkoutButton.setVisibility(View.GONE);
             emptyState.setVisibility(View.VISIBLE);
+            cartRootLayout.setVisibility(View.GONE);
         } else {
             checkoutButton.setVisibility(View.VISIBLE);
             emptyState.setVisibility(View.GONE);
+            cartRootLayout.setVisibility(View.VISIBLE);
         }
 
         if (!slabList.isEmpty()) {

@@ -41,6 +41,7 @@ public class ThankYouActivity extends AppCompatActivity {
 
     private void openMainActivity() {
         Intent intent = new Intent(this,MainActivity.class);
+        intent.putExtra("origin", "ThankYouActivity");
         startActivity(intent);
     }
 }

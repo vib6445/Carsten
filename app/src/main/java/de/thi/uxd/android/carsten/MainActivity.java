@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,9 +42,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = this.getIntent();
         String dest = intent.getStringExtra("dest");
         if (dest != null && dest.equals("createSlab")) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CreateFragment()).commit();
+            topNav.setSelectedItemId(R.id.nav_create);
         } else {
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+            topNav.setSelectedItemId(R.id.nav_home);
         }
 
 

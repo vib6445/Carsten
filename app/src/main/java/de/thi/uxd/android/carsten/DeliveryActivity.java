@@ -58,16 +58,13 @@ public class DeliveryActivity extends FragmentActivity implements OnMapReadyCall
 
             @Override
             public void onClick(View v) {
-                openMainActivity();
+                Intent intent = new Intent(DeliveryActivity.this, MainActivity.class);
+                intent.putExtra("origin", "ThankYouActivity");
+                startActivity(intent);
             }
 
         });
 
-    }
-
-    private void openMainActivity() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
     }
 
 

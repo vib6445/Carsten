@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,17 +22,24 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View v = inflater.inflate((R.layout.fragment_home), container, false);
 
-        final BottomNavigationView topNav = getActivity().findViewById(R.id.top_navigation);
 
-
+        Intent intent = getActivity().getIntent();
+        final String origin = intent.getStringExtra("origin");
         CardView buttonDelivery = v.findViewById(R.id.btn_deliveryStatus);
+
         buttonDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), DeliveryActivity.class);
-                startActivity(intent);
+                if (origin != null && origin.equals("ThankYouActivity")) {
+                    Intent intent = new Intent(getActivity(), DeliveryActivity.class);
+                    startActivity(intent);
+                } else {
+                    Toast.makeText(getContext(), "First create your order, so we can deliver your slab.", Toast.LENGTH_LONG).show();
+                }
             }
         });
+
+        final BottomNavigationView topNav = getActivity().findViewById(R.id.top_navigation);
 
         CardView buttonCreate = v.findViewById(R.id.btn_newOrder);
         buttonCreate.setOnClickListener(new View.OnClickListener() {
@@ -49,8 +57,7 @@ public class HomeFragment extends Fragment {
                 topNav.setSelectedItemId(R.id.nav_account);
             }
         });
+
         return v;
-
-
     }
 }
