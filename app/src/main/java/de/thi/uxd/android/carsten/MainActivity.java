@@ -40,18 +40,23 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView topNav = findViewById(R.id.top_navigation);
         topNav.setOnNavigationItemSelectedListener(navListener);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+        Intent intent = this.getIntent();
+        String dest = intent.getStringExtra("dest");
+        if (dest != null && dest.equals("createSlab")) {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CreateFragment()).commit();
+        } else {
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+        }
+
+
     }
 
 
     public void openCartActivity(){
-        if (cartContainer.getSlabList().isEmpty()) {
-            Toast.makeText(getApplicationContext(), "Your current Cart is empty. Start with creating new Slabs.", Toast.LENGTH_LONG).show();
-        } else {
-            Intent intent = new Intent(this, CartActivity.class);
-            intent.putExtra("CartContainer", cartContainer);
-            startActivity(intent);
-        }
+
+        Intent intent = new Intent(this, CartActivity.class);
+        intent.putExtra("CartContainer", cartContainer);
+        startActivity(intent);
 
     }
 

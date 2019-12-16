@@ -1,11 +1,13 @@
 package de.thi.uxd.android.carsten;
 
-import androidx.fragment.app.FragmentActivity;
-
-
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
@@ -51,7 +53,23 @@ public class DeliveryActivity extends FragmentActivity implements OnMapReadyCall
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.deliverymarker))
                 .title("Delivery");
 
+        Button backButton = findViewById(R.id.btn_back_to_home);
+        backButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                openMainActivity();
+            }
+
+        });
+
     }
+
+    private void openMainActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
 
     /**
      * Manipulates the map when it's available.
@@ -60,12 +78,12 @@ public class DeliveryActivity extends FragmentActivity implements OnMapReadyCall
     @Override
     public void onMapReady(GoogleMap googleMap) {
 
+        Toast.makeText(getApplicationContext(), "Map ready", Toast.LENGTH_SHORT);
         // Customise the styling of the base map using a JSON object defined
         // in a string resource file. First create a MapStyleOptions object
         // from the JSON styles string, then pass this to the setMapStyle
         // method of the GoogleMap object.
-        boolean success = googleMap.setMapStyle(new MapStyleOptions(getResources()
-                .getString(R.string.style_json)));
+        boolean success = googleMap.setMapStyle(new MapStyleOptions(getResources().getString(R.string.style_json)));
 
         if (!success) {
             Log.e(TAG, "Style parsing failed.");

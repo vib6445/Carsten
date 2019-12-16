@@ -21,4 +21,31 @@
     <string name="beer_long">Beer (Long)</string>
     <string name="beer_short">Beer (Short)</string>
     <string name="title_activity_delivery">Map</string>
+
+    <!-- Bottle Names -->
+    <string name="coca_cola">Coca Cola</string>
+    <string name="sprite">Sprite</string>
+    <string name="mezzo_mix">Mezzo Mix</string>
+    <string name="fanta">Fanta</string>
+    <string name="augustiner_hell">Augustiner Helles</string>
+    <string name="augustiner_edelstoff">Augustiner Edelstoff</string>
+    <string name="tegernseer_hell">Tegernseer Helles</string>
+    <string name="spaten_hell">Spaten Helles</string>
+    <string name="gutmann_weizen">Gutmann Weißbier</string>
+    <string name="paulaner_hell">Paulaner Helles</string>
+    <string name="paulaner_weizen">Paulaner Weißbier</string>
+    <string name="paulaner_radler">Paulaner Radler</string>
+    <string name="paulaner_alkoholfrei">Paulaner Alkoholfrei</string>
+    <string name="loewen_hell">Löwenbäu Helles</string>
+    <string name="goesser_hell">Gösser Helles</string>
+    <string name="goesser_radler">Gösser Radler</string>
+
+    <!-- Bottle Types -->
+    <string name="lemonade_bottle_type">1.0 liter PET</string>
+    <string name="beer_short_bottle_type">0.5 liter glass</string>
+    <string name="beer_long_bottle_type">0.5 liter glass</string>
+
+    <!-- Bottle Prices -->
+    <string name="lemonade_price">1.90 $</string>
+    <string name="beer_price">1.10 $</string>
 </resources>
