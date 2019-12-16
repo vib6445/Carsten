@@ -1,7 +1,10 @@
 package de.thi.uxd.android.carsten;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
@@ -50,6 +53,21 @@ public class DeliveryActivity extends FragmentActivity implements OnMapReadyCall
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.deliverymarker))
                 .title("Delivery");
 
+        Button backButton = findViewById(R.id.btn_back_to_home);
+        backButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                openMainActivity();
+            }
+
+        });
+
+    }
+
+    private void openMainActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 

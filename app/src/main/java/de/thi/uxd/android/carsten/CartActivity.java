@@ -27,50 +27,68 @@ public class CartActivity extends AppCompatActivity {
         CartContainer cartContainer = (CartContainer) intent.getSerializableExtra("CartContainer");
 
         ArrayList<Slab> slabList = cartContainer.getSlabList();
-        /* for (int i = 0; i < slabList.size(); i++) {
-            String out = slabList.get(i).getSlabBottles()[i].getBottleType();
-            Toast.makeText(getApplicationContext(), out, Toast.LENGTH_SHORT).show();
-        } */
 
         LinearLayout cartRootLayout = findViewById(R.id.cartRootLayout);
 
-        for (int i = 0; i < slabList.size(); i++) {
-            View cardView = getLayoutInflater().inflate(R.layout.cart_cardview, null);
 
-            LinearLayout slabSpace = cardView.findViewById(R.id.slabSpace);
-            int layout;
-            if ("lemonade".equals(slabList.get(i).getType())) {
-                layout = R.layout.slab_lemonade;
-            } else {
-                layout = R.layout.slab_shortbeer;
-            }
-            View slabView = getLayoutInflater().inflate(layout, null);
-
-
-            ArrayList<View> allViewsWithinMySlabView = getAllChildren(slabView);
-            int id = 0;
-            for (View child : allViewsWithinMySlabView) {
-                if (child instanceof ImageButton) {
-                    ImageButton childButton = (ImageButton) child;
-                    childButton.setImageResource(slabList.get(i).getSlabBottles()[id].getDrawableID());
-                    id++;
-                }
-            }
-
-
-            slabSpace.addView(slabView);
-            cartRootLayout.addView(cardView);
-        }
 
         Button checkoutButton = findViewById(R.id.checkoutButton);
-        checkoutButton.setOnClickListener(new View.OnClickListener() {
+        LinearLayout emptyState = findViewById(R.id.emptyState);
+        if (slabList.isEmpty()) {
+            checkoutButton.setVisibility(View.GONE);
+            emptyState.setVisibility(View.VISIBLE);
+        } else {
+            checkoutButton.setVisibility(View.VISIBLE);
+            emptyState.setVisibility(View.GONE);
+        }
 
-            @Override
-            public void onClick(View v) {
-                openCheckoutActivity();
+        if (!slabList.isEmpty()) {
+            for (int i = 0; i < slabList.size(); i++) {
+                View cardView = getLayoutInflater().inflate(R.layout.cart_cardview, null);
+
+                LinearLayout slabSpace = cardView.findViewById(R.id.slabSpace);
+                int layout;
+                if ("lemonade".equals(slabList.get(i).getType())) {
+                    layout = R.layout.slab_lemonade;
+                } else {
+                    layout = R.layout.slab_shortbeer;
+                }
+                View slabView = getLayoutInflater().inflate(layout, null);
+
+
+                ArrayList<View> allViewsWithinMySlabView = getAllChildren(slabView);
+                int id = 0;
+                for (View child : allViewsWithinMySlabView) {
+                    if (child instanceof ImageButton) {
+                        ImageButton childButton = (ImageButton) child;
+                        childButton.setImageResource(slabList.get(i).getSlabBottles()[id].getDrawableID());
+                        id++;
+                    }
+                }
+
+
+                slabSpace.addView(slabView);
+                cartRootLayout.addView(cardView);
             }
 
-        });
+            checkoutButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openCheckoutActivity();
+                }
+
+            });
+        } else {
+            Button createSlab = findViewById(R.id.createSlab);
+            createSlab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(CartActivity.this, MainActivity.class);
+                    intent.putExtra("dest", "createSlab");
+                    startActivity(intent);
+                }
+            });
+        }
     }
 
 
