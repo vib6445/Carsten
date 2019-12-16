@@ -49,6 +49,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
+            android:layout_marginBottom="10dp"
             android:text="Personal Data"
             android:fontFamily="@font/greycliffcf_extrabold"
             android:textColor="#000"
@@ -65,7 +66,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_paypal"
+                android:src="@drawable/ic_profileicon"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -89,7 +90,7 @@
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:paddingBottom="10dp"/>
+            android:paddingBottom="5dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -100,7 +101,7 @@
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:paddingBottom="10dp"/>
+            android:paddingBottom="15dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,7 +113,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_paypal"
+                android:src="@drawable/ic_homeicon"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -136,7 +137,7 @@
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:paddingBottom="10dp"/>
+            android:paddingBottom="5dp"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -147,7 +148,7 @@
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:paddingBottom="10dp"/>
+            android:paddingBottom="15dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -159,7 +160,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_paypal"
+                android:src="@drawable/ic_mail"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -183,7 +184,7 @@
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:paddingBottom="10dp"/>
+            android:paddingBottom="15dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -195,7 +196,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_paypal"
+                android:src="@drawable/ic_phone"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -219,12 +220,13 @@
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:paddingBottom="20dp"/>
+            android:layout_marginBottom="30dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
+            android:layout_marginBottom="10dp"
             android:text="Payment Methods"
             android:fontFamily="@font/greycliffcf_extrabold"
             android:textColor="#000"
@@ -242,7 +244,7 @@
             <ImageView
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:src="@drawable/ic_paypal"
+                android:src="@drawable/ic_creditcard"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"/>
 
@@ -261,12 +263,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="65dp"
-            android:text="None"
+            android:text="XXXXX-43"
             android:fontFamily="@font/greycliffcf_light"
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:paddingBottom="10dp"/>
+            android:paddingBottom="15dp"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -302,7 +304,7 @@
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:paddingBottom="10dp"/>
+            android:paddingBottom="15dp"/>
 
 
 
