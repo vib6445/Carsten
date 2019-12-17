@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".PhilosophyActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:baselineAligned="false"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+            <Button
+                android:id="@+id/btn_back_to_home"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_button_white"
+                android:drawableLeft="@drawable/ic_back"
+                android:elevation="0dp"
+                android:paddingLeft="14dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/greycliffcf_extrabold"
+                android:paddingBottom="10dp"
+                android:text="Our Philosophy"
+                android:textColor="#000"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/greycliffcf_bold"
+                android:lineHeight="28dp"
+                android:text="We care about the environment, which is why we deliver your orders to your home as green as possible!"
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:layout_gravity="left"
+            android:layout_marginVertical="60dp"
+            android:scaleType="fitStart"
+            app:srcCompat="@drawable/background_philosophy" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/greycliffcf_bold"
+                android:lineHeight="28dp"
+                android:text="Our delivery vehicles drive one large tour to every costumer, the produced smog is much lower than if every costumer would drive to us for their orders."
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="24dp"
+                android:fontFamily="@font/greycliffcf_bold"
+                android:lineHeight="28dp"
+                android:text="All our delivery vehicles are electrified. Close distances we can even mange by bike."
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="350dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="32dp"
+                android:fontFamily="@font/greycliffcf_bold"
+                android:lineHeight="28dp"
+                android:text="Finally, we use AI optimized routes so our drivers not only take the shortest, but also the most resource-saving way to your home."
+                android:textColor="@color/colorBlack"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -55,8 +55,8 @@ public class CreateFragment extends Fragment {
         PagerAdapter pagerAdapter = new FixedTabsPagerAdapter(getChildFragmentManager());
         viewPagerObject.setAdapter(pagerAdapter);
 
-        // Our selection is the first active item when going to the Slab-Creation
-        viewPagerObject.setCurrentItem(0);
+        // Lemonade is the first active item when going to the Slab-Creation
+        viewPagerObject.setCurrentItem(1);
 
         // Use the ToggleButtons to change the shown fragment of the ViewPagers and set the drop shadow below the card view to highlight the activated state of the related ToggleButton
         setToggleListener();
@@ -71,7 +71,7 @@ public class CreateFragment extends Fragment {
         }
 
         // Initialized RadioButton when opened the first time
-        toggleOff(0);
+        toggleOff(viewPagerObject.getCurrentItem());
         setCardViewState();
 
         // Sets RadioButton and CardView State when another RadioButton gets activated
