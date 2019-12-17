@@ -9,7 +9,7 @@
         android:orientation="vertical"
         android:layout_marginRight="15dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="20dp">
+        android:layout_marginTop="10dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -64,8 +64,8 @@
             android:layout_gravity="center_vertical">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/ic_profileicon"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"/>
@@ -111,8 +111,8 @@
             android:layout_gravity="center_vertical">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/ic_homeicon"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"/>
@@ -158,8 +158,8 @@
             android:layout_gravity="center_vertical">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/ic_mail"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"/>
@@ -194,8 +194,8 @@
             android:layout_gravity="center_vertical">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/ic_phone"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"/>
@@ -242,8 +242,8 @@
             android:layout_gravity="center_vertical">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/ic_creditcard"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"/>
@@ -278,8 +278,8 @@
             android:layout_gravity="center_vertical">
 
             <ImageView
-                android:layout_width="30dp"
-                android:layout_height="30dp"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:src="@drawable/ic_paypal"
                 android:layout_marginTop="3dp"
                 android:layout_marginLeft="20dp"/>
