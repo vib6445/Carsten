@@ -15,6 +15,16 @@
         android:orientation="vertical"
         android:paddingBottom="10dp">
 
+        <Button
+            android:id="@+id/btn_back_to_home"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:paddingLeft="14dp"
+            android:background="@drawable/rounded_button_white"
+            android:drawableLeft="@drawable/ic_back"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -24,7 +34,7 @@
             android:fontFamily="@font/greycliffcf_extrabold"
             android:paddingBottom="10dp"
             android:text="Checkout"
-            android:textColor="#000"
+            android:textColor="@color/colorAccent"
             android:textSize="40sp"
             android:textStyle="bold" />
 
@@ -54,7 +64,7 @@
             android:fontFamily="@font/greycliffcf_extrabold"
             android:paddingBottom="10dp"
             android:text="45.60 $"
-            android:textColor="#000"
+            android:textColor="@color/colorAccent"
             android:textSize="35sp"
             android:textStyle="bold" />
 
@@ -82,7 +92,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/colorAccent"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -133,7 +144,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/colorAccent"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -197,7 +209,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/colorAccent"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -240,7 +253,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="16dp" />
+                android:layout_marginTop="16dp"
+                android:buttonTint="@color/colorAccent"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -255,7 +269,7 @@
                     android:layout_height="20dp"
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="3dp"
-                    android:src="@drawable/ic_paypal" />
+                    android:src="@drawable/ic_creditcard" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -274,7 +288,7 @@
                 android:layout_marginLeft="50dp"
                 android:fontFamily="@font/greycliffcf_light"
                 android:paddingBottom="10dp"
-                android:text="michael.kronester@live.de"
+                android:text="XXXXX-25"
                 android:textColor="#000"
                 android:textSize="18sp"
                 android:textStyle="bold" />
@@ -291,6 +305,8 @@
             android:background="@drawable/buy_button_background"
             android:fontFamily="@font/greycliffcf_bold"
             android:text="Submit"
+            android:textSize="16sp"
+            android:textAllCaps="false"
             android:textColor="@color/colorWhite" />
 
     </LinearLayout>

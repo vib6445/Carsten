@@ -25,7 +25,14 @@ public class HomeFragment extends Fragment {
 
         Intent intent = getActivity().getIntent();
         final String origin = intent.getStringExtra("origin");
-        CardView buttonDelivery = v.findViewById(R.id.btn_deliveryStatus);
+        final CardView buttonDelivery = v.findViewById(R.id.btn_deliveryStatus);
+
+        /* Activate if button should be grey when not available
+        if (origin != null && origin.equals("ThankYouActivity")) {
+            buttonDelivery.setCardBackgroundColor(ContextCompat.getColor(getContext(), R.color.colorWhite));
+        } else {
+            buttonDelivery.setCardBackgroundColor(ContextCompat.getColor(getContext(), R.color.softWhite));
+        } */
 
         buttonDelivery.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,6 +41,7 @@ public class HomeFragment extends Fragment {
                     Intent intent = new Intent(getActivity(), DeliveryActivity.class);
                     startActivity(intent);
                 } else {
+
                     Toast.makeText(getContext(), "First create your order, so we can deliver your slab.", Toast.LENGTH_LONG).show();
                 }
             }
@@ -55,6 +63,16 @@ public class HomeFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 topNav.setSelectedItemId(R.id.nav_account);
+            }
+        });
+
+        CardView buttonPhilosophy = v.findViewById(R.id.btn_philosophy);
+        buttonPhilosophy.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), PhilosophyActivity.class);
+                startActivity(intent);
             }
         });
 

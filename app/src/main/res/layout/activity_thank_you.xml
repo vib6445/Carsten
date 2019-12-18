@@ -15,7 +15,7 @@
         android:fontFamily="@font/greycliffcf_extrabold"
         android:paddingBottom="10dp"
         android:text="Thank you!"
-        android:textColor="#000"
+        android:textColor="@color/colorAccent"
         android:textSize="40sp"
         android:textStyle="bold" />
 
@@ -48,8 +48,7 @@
         android:layout_gravity="bottom"
         android:background="@drawable/buy_button_background"
         android:fontFamily="@font/greycliffcf_bold"
-        android:textSize="18dp"
-        android:paddingBottom="6dp"
+        android:textSize="18sp"
         android:text="Show delivery status"
         android:textAllCaps="false"
         android:textColor="@color/colorWhite" />
@@ -65,8 +64,7 @@
         android:background="@drawable/secondary_button"
         android:fontFamily="@font/greycliffcf_bold"
         android:text="Back to home"
-        android:textSize="18dp"
-        android:paddingBottom="6dp"
+        android:textSize="18sp"
         android:textAllCaps="false"
         android:textColor="@color/colorBlack"/>
 

@@ -45,13 +45,11 @@ public class DeliveryActivity extends FragmentActivity implements OnMapReadyCall
 
         home = new MarkerOptions()
                 .position(position)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.homemarker))
-                .title("Home");
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.homemarker));
 
         delivery = new MarkerOptions()
                 .position(truck)
-                .icon(BitmapDescriptorFactory.fromResource(R.drawable.deliverymarker))
-                .title("Delivery");
+                .icon(BitmapDescriptorFactory.fromResource(R.drawable.deliverymarker));
 
         Button backButton = findViewById(R.id.btn_back_to_home);
         backButton.setOnClickListener(new View.OnClickListener() {

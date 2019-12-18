@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:background="@color/colorWhite">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_marginRight="15dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -21,28 +22,28 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginTop="20dp"
+                android:layout_marginRight="150dp"
                 android:layout_marginBottom="20dp"
-                android:text="Profile"
                 android:fontFamily="@font/greycliffcf_extrabold"
-                android:textColor="#000"
-                android:textSize="40sp"
-                android:textStyle="bold"
                 android:paddingBottom="10dp"
-                android:layout_marginRight="150dp"/>
+                android:text="Profile"
+                android:textColor="@color/colorAccent"
+                android:textSize="40sp"
+                android:textStyle="bold" />
 
             <Button
                 android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:background="@color/colorWhite"
-                android:drawableRight="@drawable/ic_trash"
+                android:drawableRight="@drawable/ic_edit"
                 android:fontFamily="@font/greycliffcf_bold"
                 android:gravity="center_vertical"
+                android:stateListAnimator="@null"
                 android:text="Edit"
                 android:textAllCaps="false"
                 android:textColor="@color/colorBlack"
-                android:textSize="15sp"
-                android:stateListAnimator="@null"/>
+                android:textSize="15sp" />
         </LinearLayout>
 
         <TextView
@@ -50,34 +51,34 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginBottom="10dp"
+            android:fontFamily="@font/greycliffcf_extrabold"
             android:text="Personal Data"
-            android:fontFamily="@font/greycliffcf_extrabold"
             android:textColor="#000"
             android:textSize="25sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginTop="5dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical">
+            android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/ic_profileicon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginLeft="20dp"/>
+                android:src="@drawable/ic_profileicon" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:fontFamily="@font/greycliffcf_bold"
                 android:text="Name"
-                android:textSize="20sp"
-                android:fontFamily="@font/greycliffcf_bold"
-                android:textColor="@color/colorBlack"/>
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -85,46 +86,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="65dp"
+            android:fontFamily="@font/greycliffcf_light"
+            android:paddingBottom="5dp"
             android:text="Michael"
-            android:fontFamily="@font/greycliffcf_light"
             android:textColor="#000"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingBottom="5dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="65dp"
+            android:fontFamily="@font/greycliffcf_light"
+            android:paddingBottom="15dp"
             android:text="Kronester"
-            android:fontFamily="@font/greycliffcf_light"
             android:textColor="#000"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingBottom="15dp"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginTop="5dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical">
+            android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/ic_homeicon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginLeft="20dp"/>
+                android:src="@drawable/ic_homeicon" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:fontFamily="@font/greycliffcf_bold"
                 android:text="Adress"
-                android:textSize="20sp"
-                android:fontFamily="@font/greycliffcf_bold"
-                android:textColor="@color/colorBlack"/>
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -132,46 +133,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="65dp"
+            android:fontFamily="@font/greycliffcf_light"
+            android:paddingBottom="5dp"
             android:text="Uhdestraße 27"
-            android:fontFamily="@font/greycliffcf_light"
             android:textColor="#000"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingBottom="5dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="65dp"
+            android:fontFamily="@font/greycliffcf_light"
+            android:paddingBottom="15dp"
             android:text="81477 Munich"
-            android:fontFamily="@font/greycliffcf_light"
             android:textColor="#000"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingBottom="15dp"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginTop="5dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical">
+            android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/ic_mail"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginLeft="20dp"/>
+                android:src="@drawable/ic_mail" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:fontFamily="@font/greycliffcf_bold"
                 android:text="E-Mail"
-                android:textSize="20sp"
-                android:fontFamily="@font/greycliffcf_bold"
-                android:textColor="@color/colorBlack"/>
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -179,35 +180,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="65dp"
-            android:text="michael.kronester@live.de"
             android:fontFamily="@font/greycliffcf_light"
+            android:paddingBottom="15dp"
+            android:text="michael.kronester@live.de"
             android:textColor="#000"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingBottom="15dp"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginTop="5dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical">
+            android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/ic_phone"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginLeft="20dp"/>
+                android:src="@drawable/ic_phone" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:text="Phone"
-                android:textSize="20sp"
                 android:fontFamily="@font/greycliffcf_bold"
-                android:textColor="@color/colorBlack"/>
+                android:text="Phone"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -215,47 +216,47 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="65dp"
-            android:text="0176 72941091"
+            android:layout_marginBottom="30dp"
             android:fontFamily="@font/greycliffcf_light"
+            android:text="0176 72941091"
             android:textColor="#000"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginBottom="30dp"/>
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginBottom="10dp"
-            android:text="Payment Methods"
             android:fontFamily="@font/greycliffcf_extrabold"
+            android:paddingBottom="10dp"
+            android:text="Payment Methods"
             android:textColor="#000"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:paddingBottom="10dp"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginTop="5dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical">
+            android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/ic_creditcard"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginLeft="20dp"/>
+                android:src="@drawable/ic_creditcard" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
+                android:fontFamily="@font/greycliffcf_bold"
                 android:text="Credit Card"
-                android:textSize="20sp"
-                android:fontFamily="@font/greycliffcf_bold"
-                android:textColor="@color/colorBlack"/>
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -263,35 +264,35 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="65dp"
-            android:text="XXXXX-43"
             android:fontFamily="@font/greycliffcf_light"
+            android:paddingBottom="15dp"
+            android:text="XXXXX-43"
             android:textColor="#000"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:paddingBottom="15dp"/>
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
             android:layout_marginTop="5dp"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical">
+            android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:src="@drawable/ic_paypal"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_marginTop="3dp"
-                android:layout_marginLeft="20dp"/>
+                android:src="@drawable/ic_paypal" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:text="Paypal"
-                android:textSize="20sp"
                 android:fontFamily="@font/greycliffcf_bold"
-                android:textColor="@color/colorBlack"/>
+                android:text="Paypal"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp" />
 
         </LinearLayout>
 
@@ -299,15 +300,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="65dp"
-            android:text="michael.kronester@live.de"
             android:fontFamily="@font/greycliffcf_light"
+            android:paddingBottom="15dp"
+            android:text="michael.kronester@live.de"
             android:textColor="#000"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:paddingBottom="15dp"/>
-
-
-
+            android:layout_marginBottom="40dp"/>
 
 
     </LinearLayout>
