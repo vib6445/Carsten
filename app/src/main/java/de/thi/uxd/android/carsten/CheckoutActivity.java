@@ -14,9 +14,9 @@ public class CheckoutActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_checkout);
 
-        Button thankYouButton = findViewById(R.id.checkoutButton);
+        Button submitButton = findViewById(R.id.submitButton);
 
-        thankYouButton.setOnClickListener(new View.OnClickListener() {
+        submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openThankYouActivity();
@@ -29,4 +29,5 @@ public class CheckoutActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ThankYouActivity.class);
         startActivity(intent);
     }
+
 }
