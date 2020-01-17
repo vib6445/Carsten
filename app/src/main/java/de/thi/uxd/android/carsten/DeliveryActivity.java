@@ -4,7 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.fragment.app.FragmentActivity;
@@ -51,7 +51,7 @@ public class DeliveryActivity extends FragmentActivity implements OnMapReadyCall
                 .position(truck)
                 .icon(BitmapDescriptorFactory.fromResource(R.drawable.deliverymarker));
 
-        Button backButton = findViewById(R.id.btn_back_to_home);
+        ImageButton backButton = findViewById(R.id.btn_back_to_home);
         backButton.setOnClickListener(new View.OnClickListener() {
 
             @Override

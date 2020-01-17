@@ -92,6 +92,14 @@ public class CartActivity extends AppCompatActivity {
                 }
             });
         }
+
+        Button backButton = findViewById(R.id.btn_back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 
 

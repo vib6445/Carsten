@@ -1,11 +1,11 @@
 package de.thi.uxd.android.carsten;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class CheckoutActivity extends AppCompatActivity {
 
@@ -22,6 +22,14 @@ public class CheckoutActivity extends AppCompatActivity {
                 openThankYouActivity();
             }
 
+        });
+
+        Button backButton = findViewById(R.id.btn_back);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
         });
     }
 

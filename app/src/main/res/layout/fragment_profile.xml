@@ -30,19 +30,6 @@
                 android:textSize="40sp"
                 android:textStyle="bold" />
 
-            <Button
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorWhite"
-                android:drawableRight="@drawable/ic_edit"
-                android:fontFamily="@font/greycliffcf_bold"
-                android:gravity="center_vertical"
-                android:stateListAnimator="@null"
-                android:text="Edit"
-                android:textAllCaps="false"
-                android:textColor="@color/colorBlack"
-                android:textSize="15sp" />
         </LinearLayout>
 
         <TextView
